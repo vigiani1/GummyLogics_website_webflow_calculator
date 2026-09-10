@@ -1,0 +1,2871 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" type="image/webp" href="data:image/webp;base64,UklGRlIFAABXRUJQVlA4IEYFAADQGgCdASpAAEAAPjEWh0KiIQsHVwAQAYJaADP0Bosv7Nwc5TepLRpnjfMB+s3+A9pfpAP1c6zb0APLS9kH9u/279oDVuVz/0vwR8HXiXKPwbzQPwf9E4gd4p/M/8JvT3KP6F/rONH6jeZ9/pON98S9gD+X/3X/kf0j12f+D/D+eX6K/6f+N+AT+W/1D/f8DF+zrP0SZRd/Dc7ie4+0T/Ac/hAoQl0LaIOTDKYDWsyIuG9Cr87gMDmTeytC2nGtn8VUD1LEnwTU+UcVb4CLSpkrf55QNBE96DheGWPXWzgAAP7//7ODd6Jw6cuXvHcnvQkziHd5fe0GUWNiKlH8oVN+bSamBybtJ9a8FDDSMiE0ekVYoH29dOslH3wM5THylY/PXRbx9fpl2qBKzqsGu2MVC53xkCxBsm57CKf/kmpCqQ8917P/3iR5lRduXN5o+dnJSvc1vBupG49Rv7PmNf9m6WsfQf0fHOnqAnjL+ezH9O22H5TnjAw28u1epjs01KDzot48IsWIv/PSvXvvsJOG88rfnHGnjWP3/76N+atm+xntnOO/mWristYAPIlzqW3uqdi5JV2W8qtHLa0oByrvLuGTzk+0y+ex3yl67vVH+m2cMplm8s9jhusZCU2lAI4dAiIVcTQTlCtrdlealc94QCGFqmNYGVbN3qMy7i/zL/+/Kp4aC2f6/lTzkPRXGtcrZ7bXu/Z16BqnSsv/Dcn/ogvA72Y+AJOzZt/csE0sfZzX9gibpjblowuxlPbTb7QUFkxwG71sNyOLqqg4tMvX/pGWz6zy2rhUZq2FVyT7fCRDLf8x1KtyrAONWPF5x39EiRUO1gPfm+p1jm0qnd+5b5GZP7TDtHq7RhqDfeSs5q4bNwk0OYRhz0K5qv8kQWo4bQudBPuaWCbf5owXHRZh8nH7tHLVsPOpCOp5b5cSKByRRp5vSFDptqrqaNygpkKlfhejSFUOARGQ6bvo/eF+qFNsuCrTrO1gfIMBVSkj1mi2Dc0nt/iX0TY//nfwnOZg9dZrjn/YBju3+eLqFoiVxfuqSDgzLfX4Nl4DN+Txv4kQZuXaO/OfJYa568ljQrOimNmIAgrSVTLXge02A5oDBJzMOrmpfEfEgC0vfVMpNUvhICv839YjPdrPe7Rp3eM6ERCNxtrjVPMPxcR+jStin7WOnGKnCQePkTobQBXz8N+MTFKpoH/X95coeWKP8oDuRRbfoUOalGktbSo0rUgTbwz+wy11SAYR+cZvr+yd9v9PT4RCAD/3BpgVScwKJTBQsxZvWhIW00sj1RPtTpzy9I1rCvZSrRtEvnwBn8z/bqiDxAHeAYtP6f/+/LxSUAcxVRYOz2i1KXIL+IIS6/sp1qJIA+1poENwWCR+loH2mCv8M/VfgFT4uTSq+yq8bgNgNXvljruVWew2Byf/BcfZNYcE5msYKs3cB7/ogn3xjHAqJnX30DXTYHIP9OXTmR7HnxUVradebE+7j+v+6IG1aO2pjCzr5A6U8wqRZhY968GjN8vU2X3iWOUP52dNxa9t9jKEPDCVFSKFTqFUjGQZH4DvJJjmpjgPJclV4j+0/SoA3kf9oaPeH/mAVR+SIi2pHJDXe2H05D/5b8CMLjIoW3Pj1Osl1+5dpN9ar5/yahexU/+zgT7ObJmInyl2txHcjBYUd3Tu69VhYosuq+J+uk43Vemo55GW/Ps/KbS3bypaMfE/nmCyDxrfUn1p5xgfjd5b68+mMzUvQEU/hxtHq7s4MH/aAICSSbB0Nbp5uUWWPqYC5qslgsHFd7iznHmbssAAAAA=">
+<title>GummyLogics &mdash; Infused Gummy Calculator</title>
+<!--
+  ANALYTICS SETUP (do this once you have a domain to deploy to):
+  This page already calls track("calculate"|"export"|"print"|"copy"|"save_batch")
+  on the matching buttons. Pick ONE provider and paste its snippet below the
+  comment closes -- the existing track() calls will pick it up automatically,
+  no other code changes needed.
+
+  Option A - Plausible (privacy-first, no cookie banner needed, ~$9/mo):
+    <script defer data-domain="yourdomain.com" src="https://plausible.io/js/script.tagged-events.js"></script>
+
+  Option B - Umami (open source, free self-host or cheap cloud):
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="YOUR-ID"></script>
+
+  Option C - Google Analytics 4 (free, more setup, cookie consent needed in some regions):
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+    gtag("js",new Date());gtag("config","G-XXXXXXX");</script>
+-->
+<style>
+:root{
+  /* GummyLogics brand palette, sampled from the logo mark */
+  --ac:#4a7c0f; --ac2:#395f0b; --acs:#f3f9e6; --acb:#cfe08a;
+  --ink:#0b0f14; --ink2:#343d47; --mut:#697280; --mut2:#98a2af;
+  --line:#e3e7ec; --line2:#eef1f4; --bg:#f7f8fa; --srf:#ffffff; --srf2:#fafbfc;
+  --red:#b42318; --reds:#fef3f2; --redb:#fecdca;
+  --amb:#b54708; --ambs:#fffaeb; --ambb:#fedf89;
+  --blue:#175cd3; --purple:#5925dc; --teal:#0e7090; --slate:#5c6670;
+  --green:#4a7c0f; --amber:#b54708; --brand:#4a7c0f; --brand2:#15301f;
+  --lime:#a6be06; --limes:#f7fbe9;
+  --r:10px; --shadow:0 1px 2px rgba(11,15,20,.05);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  background:var(--bg);color:var(--ink);line-height:1.5;font-size:14px;
+  -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;
+  font-feature-settings:"tnum" 1,"cv05" 1}
+.page{max-width:1140px;margin:0 auto;padding:28px 20px 56px}
+.card{background:var(--srf);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);overflow:hidden}
+
+/* ---------- header ---------- */
+.hd{background:var(--srf);padding:22px 28px 20px;display:flex;align-items:center;gap:14px;border-bottom:1px solid var(--line)}
+.hd .lg{width:46px;height:46px;border-radius:11px;background:var(--acs);border:1px solid var(--acb);display:flex;align-items:center;
+  justify-content:center;flex:0 0 auto;overflow:hidden;padding:4px}
+.hd .lg img{width:100%;height:100%;object-fit:contain;display:block}
+.hd h1{font-size:20px;font-weight:700;letter-spacing:-.022em;line-height:1.25}
+.hd h1 .g1{color:var(--ac)}
+.hd h1 .g2{color:var(--brand2)}
+.hd h1 .sub{display:block;color:var(--mut);font-size:12.5px;margin-top:2px;letter-spacing:-.005em;font-weight:500}
+.hd .v{margin-left:auto;background:var(--srf);color:var(--mut);font-size:10.5px;font-weight:600;border:1px solid var(--line);
+  padding:4px 9px;border-radius:6px;letter-spacing:.04em;text-transform:uppercase;flex:0 0 auto}
+
+/* ---------- toolbar / buttons ---------- */
+.tb{display:flex;gap:8px;padding:12px 28px;border-bottom:1px solid var(--line);background:var(--srf2);flex-wrap:wrap;align-items:center}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:7px;border-radius:8px;padding:8px 13px;
+  font-size:13px;font-weight:550;cursor:pointer;font-family:inherit;letter-spacing:-.006em;
+  background:var(--srf);border:1px solid var(--line);color:var(--ink2);
+  transition:background .13s,border-color .13s,color .13s,box-shadow .13s}
+.btn:hover{background:var(--srf2);border-color:#d3d9e0;color:var(--ink)}
+.btn:active{background:#f1f3f6}
+.btn:focus-visible{outline:none;box-shadow:0 0 0 3px rgba(4,120,87,.16);border-color:var(--ac)}
+.btn svg{opacity:.62}
+.btn:hover svg{opacity:.85}
+/* the single primary action */
+.b-green{background:var(--ac);border-color:var(--ac);color:#fff;font-weight:600;box-shadow:0 1px 2px rgba(4,120,87,.2)}
+.b-green:hover{background:var(--ac2);border-color:var(--ac2);color:#fff}
+.b-green:active{background:var(--ac2)}
+.b-green svg{opacity:1}
+.b-slate{color:var(--mut)}
+.b-red{color:var(--red);border-color:var(--redb)}
+.b-red:hover{background:var(--reds);color:var(--red);border-color:#fca5a5}
+.tb .sp{margin-left:auto}
+.btn.lg{display:inline-flex;flex:0 0 auto;gap:8px;padding:11px 22px;font-size:14px}
+.btn.sm{display:inline-flex;flex:0 0 auto;padding:5px 11px;font-size:12px;border-radius:7px}
+
+/* ---------- sections ---------- */
+.sec{padding:24px 28px}
+.sec + .sec{border-top:1px solid var(--line)}
+.sec-hd{display:flex;align-items:center;gap:9px;margin-bottom:3px}
+.sec-hd h2{font-size:14px;font-weight:620;letter-spacing:-.012em}
+.bar{width:3px;height:15px;border-radius:2px;background:var(--ac);flex:0 0 auto}
+.sec-sub{font-size:12.5px;color:var(--mut);margin-bottom:16px;letter-spacing:-.005em;max-width:78ch}
+.sec-sub b{color:var(--ink2);font-weight:600}
+
+/* ---------- tile grid ---------- */
+.tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(238px,1fr));gap:8px}
+.tile{display:flex;align-items:center;gap:11px;text-align:left;background:var(--srf);border:1px solid var(--line);
+  border-radius:var(--r);padding:10px 11px;cursor:pointer;font-family:inherit;width:100%;
+  transition:border-color .13s,box-shadow .13s,background .13s}
+.tile:hover{border-color:#cfd6de;box-shadow:0 1px 3px rgba(11,15,20,.07)}
+.tile:focus-visible{outline:none;border-color:var(--ac);box-shadow:0 0 0 3px rgba(4,120,87,.14)}
+.tile.on{border-color:var(--ac);background:var(--acs)}
+.tile .ic{width:26px;height:26px;border-radius:7px;display:flex;align-items:center;justify-content:center;
+  flex:0 0 auto;font-size:11px;font-weight:600;color:#fff;opacity:.9}
+.tile .tx{min-width:0;flex:1}
+.tile .n{display:block;font-size:12.5px;font-weight:570;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;letter-spacing:-.008em}
+.tile .v{display:block;font-size:11.5px;color:var(--mut2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+  font-variant-numeric:tabular-nums;margin-top:1px}
+.tile .v.set{color:var(--ink2);font-weight:500}
+.tile .dot{width:6px;height:6px;border-radius:50%;background:#dfe3e8;flex:0 0 auto}
+.tile .dot.set{background:var(--ac)}
+.tile .dot.err{background:var(--red);box-shadow:0 0 0 3px rgba(180,35,24,.14)}
+.tile.err{border-color:var(--redb);background:var(--reds)}
+.tile.opt .n:after{content:" optional";font-size:9.5px;font-weight:500;color:#b6bec8;letter-spacing:.03em;text-transform:uppercase;margin-left:5px}
+
+/* ---------- input groups (hidden until a tile opens them) ---------- */
+#grpHolder{display:none}
+.grp{display:grid;gap:16px}
+.f label{display:block;font-size:11px;font-weight:600;color:var(--ink2);margin-bottom:6px;
+  letter-spacing:.035em;text-transform:uppercase}
+.f label .o{font-size:9.5px;font-weight:500;color:var(--mut2);letter-spacing:.04em;margin-left:5px}
+.f input[type=number],.f input[type=text],.f select{width:100%;padding:9px 11px;border:1px solid var(--line);
+  border-radius:8px;font-size:14px;font-family:inherit;background:var(--srf);color:var(--ink);
+  font-variant-numeric:tabular-nums;transition:border-color .13s,box-shadow .13s;-moz-appearance:textfield}
+.f input:hover,.f select:hover{border-color:#cfd6de}
+.f input:focus,.f select:focus{outline:none;border-color:var(--ac);box-shadow:0 0 0 3px rgba(4,120,87,.14)}
+.f input::placeholder{color:#c3cad2}
+.f input:disabled,.f select:disabled{background:var(--srf2);color:var(--mut2);cursor:not-allowed}
+/* auto-filled: shows the real calculated number, locked but readable */
+.f input.auto,.f select.auto,.f input.auto:disabled,.f select.auto:disabled{
+  background:var(--acs);border-color:var(--acb);color:var(--ac);font-weight:600;cursor:default;-webkit-text-fill-color:var(--ac);opacity:1}
+.f input.auto:focus{box-shadow:0 0 0 3px rgba(4,120,87,.12);border-color:var(--acb)}
+.f input.bad,.f select.bad{border-color:var(--red);background:var(--reds);color:var(--red)}
+.f input.bad:focus{box-shadow:0 0 0 3px rgba(180,35,24,.14)}
+.f .h{font-size:11.5px;color:var(--mut);margin-top:6px;line-height:1.55;letter-spacing:-.003em}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.row3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
+.pair{display:flex;gap:8px;min-width:0}
+.pair select{width:104px;min-width:74px;flex:0 1 104px}
+.pair input{flex:1 1 62px;min-width:0}
+.ck{display:flex;align-items:flex-start;gap:9px;font-size:12px;font-weight:450;color:var(--ink2);cursor:pointer;
+  background:var(--srf2);border:1px solid var(--line);border-radius:8px;padding:10px 12px;line-height:1.5}
+.ck:hover{border-color:#cfd6de}
+.ck input{width:15px;height:15px;accent-color:var(--ac);cursor:pointer;flex:0 0 auto;margin-top:1px}
+.ck span{font-variant-numeric:tabular-nums;font-weight:600;color:var(--ac);white-space:nowrap}
+.modes{display:grid;gap:8px}
+.mode{display:flex;gap:10px;align-items:flex-start;border:1px solid var(--line);border-radius:9px;
+  padding:11px 12px;cursor:pointer;transition:border-color .13s,background .13s;background:var(--srf)}
+.mode:hover{border-color:#cfd6de}
+.mode.on{border-color:var(--ac);background:var(--acs)}
+.mode input{margin-top:2px;width:15px;height:15px;accent-color:var(--ac);flex:0 0 auto}
+.mode .mn{font-size:12.5px;font-weight:570;display:block;letter-spacing:-.008em}
+.mode .md{font-size:11.5px;color:var(--mut);display:block;margin-top:1px;line-height:1.45}
+.gout{display:flex;flex-wrap:wrap;gap:6px;padding-top:14px;border-top:1px solid var(--line2)}
+.xline{border:1px solid var(--line);border-radius:10px;padding:13px 14px;background:var(--srf2);display:grid;gap:13px;margin-bottom:9px}
+.xline .xhd{display:flex;align-items:center;gap:10px}
+.xline .xn{font-size:10px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:var(--mut)}
+.xline .xhd .btn{margin-left:auto}
+.xline .xwt{display:grid;gap:12px}
+.xline .gout{padding-top:11px}
+.btn.addln{width:100%;border-style:dashed;border-color:var(--acb);background:var(--acs);color:var(--ac);font-weight:600}
+.btn.addln:hover{background:#e4f8f0;border-color:var(--ac);color:var(--ac2)}
+
+/* ---------- pills ---------- */
+.pill{background:var(--srf2);border:1px solid var(--line);border-radius:7px;padding:5px 9px;font-size:11px;
+  font-weight:500;color:var(--mut);letter-spacing:.005em}
+.pill b{font-variant-numeric:tabular-nums;color:var(--ink);font-weight:600;margin-left:5px}
+.pill.hero{background:var(--acs);border-color:var(--acb);color:var(--ac2)}
+.pill.hero b{color:var(--ac2)}
+.pill.warn{background:var(--ambs);border-color:var(--ambb);color:var(--amb)}
+.pill.warn b{color:var(--amb)}
+
+/* ---------- result cards ---------- */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(232px,1fr));gap:10px}
+.rc{border:1px solid var(--line);border-left:2px solid var(--mut2);border-radius:var(--r);padding:14px 16px;
+  background:var(--srf);color:var(--ink)}
+.rc .k{font-size:10px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:var(--mut)}
+.rc .v{font-size:26px;font-weight:600;letter-spacing:-.03em;margin:4px 0 2px;font-variant-numeric:tabular-nums;line-height:1.1}
+.rc .s{font-size:11.5px;color:var(--mut);line-height:1.45}
+.c-blue{border-left-color:var(--blue)}
+.c-green{border-left-color:var(--ac)}
+.c-purple{border-left-color:var(--purple)}
+.c-amber{border-left-color:var(--amber)}
+.c-red{border-left-color:var(--red)}
+.c-ink{border-left-color:var(--ink);background:var(--srf2)}
+.c-ink .v{color:var(--ink)}
+.wide{grid-column:1/-1}
+.span3{grid-column:span 3}
+@media (max-width:1000px){.span3{grid-column:1/-1}}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(168px,1fr));gap:10px;margin-top:10px}
+.st{background:var(--srf2);border:1px solid var(--line);border-radius:9px;padding:11px 13px}
+.st .k{font-size:10px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--mut)}
+.st .v{font-size:17px;font-weight:600;margin-top:3px;font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+.st .s{font-size:11px;color:var(--mut2);margin-top:1px}
+
+/* ---------- report ---------- */
+.rep{background:var(--srf);border:1px solid var(--line);border-radius:12px;padding:20px 22px;color:var(--ink)}
+.rep h3{font-size:13px;font-weight:620;display:flex;align-items:center;gap:9px;margin-bottom:15px;letter-spacing:-.008em}
+.rep h3 .bar{background:var(--ink)}
+.tgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px;margin-bottom:16px}
+.tt{background:var(--srf2);border:1px solid var(--line);border-radius:9px;padding:12px 14px}
+.tt .k{font-size:10px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:var(--mut)}
+.tt .v{font-size:20px;font-weight:600;margin-top:3px;font-variant-numeric:tabular-nums;letter-spacing:-.025em}
+.tt .s{font-size:11px;color:var(--mut2);margin-top:1px}
+.tt.big{background:var(--acs);border-color:var(--acb)}
+.tt.big .k{color:var(--ac2)}
+.tt.big .v{font-size:26px;color:var(--ac2)}
+.tt.big .s{color:var(--ac2);opacity:.75}
+table.bd{width:100%;border-collapse:collapse;background:var(--srf);border:1px solid var(--line);border-radius:9px;overflow:hidden}
+table.bd th{font-size:10px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--mut);
+  text-align:left;padding:9px 13px;background:var(--srf2);border-bottom:1px solid var(--line);white-space:nowrap}
+table.bd td{padding:9px 13px;font-size:12.5px;border-top:1px solid var(--line2);font-variant-numeric:tabular-nums;color:var(--ink2)}
+table.bd td:first-child{color:var(--ink)}
+table.bd td.r,table.bd th.r{text-align:right}
+table.bd tr.tot td{font-weight:650;color:var(--ink);background:var(--srf2);border-top:1px solid var(--line)}
+.rep .mut{color:var(--mut)}
+
+/* ---------- charts ---------- */
+.charts{display:grid;grid-template-columns:repeat(auto-fit,minmax(392px,1fr));gap:10px;margin:16px 0}
+.ch{background:var(--srf);border:1px solid var(--line);border-radius:10px;padding:14px 15px}
+.ch h4{font-size:10px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:var(--mut);margin-bottom:13px}
+.ch .body{display:flex;align-items:center;gap:15px;flex-wrap:wrap}
+.ch svg{flex:0 0 auto;overflow:visible}
+.ch .lg{display:grid;gap:6px;min-width:140px;flex:1 1 150px;align-content:center}
+.ch .lg .li{display:flex;align-items:center;gap:8px;font-size:11.5px;min-width:0}
+.ch .lg .sw{width:8px;height:8px;border-radius:2px;flex:0 0 auto}
+.ch .lg .ln{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;flex:1;min-width:0;color:var(--ink2)}
+.ch .lg .lv{font-variant-numeric:tabular-nums;font-weight:600;color:var(--ink);flex:0 0 auto}
+.ch .lg .lp{font-variant-numeric:tabular-nums;color:var(--mut2);flex:0 0 auto;width:46px;text-align:right}
+/* notes and bar blocks must occupy their own row inside the flex body */
+.ch .body>.chnote,.ch .body>.bars{flex:0 0 100%;width:100%}
+.bars{display:grid;gap:10px;width:100%}
+.br .t{display:flex;justify-content:space-between;font-size:11.5px;margin-bottom:4px;gap:8px}
+.br .t span:first-child{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--ink2)}
+.br .t span:last-child{font-variant-numeric:tabular-nums;font-weight:600;flex:0 0 auto;color:var(--ink)}
+.br .tk{height:6px;background:var(--line2);border-radius:3px;overflow:hidden}
+.br .fl{height:100%;border-radius:3px}
+.chnote{font-size:11px;color:var(--mut);margin-top:12px;line-height:1.5}
+
+/* ---------- cure log ---------- */
+.logt{width:100%;border-collapse:collapse;font-size:12.5px}
+.logt th{font-size:10px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--mut);
+  text-align:left;padding:9px 12px;background:var(--srf2);border-bottom:1px solid var(--line);white-space:nowrap}
+.logt td{padding:9px 12px;border-bottom:1px solid var(--line2);font-variant-numeric:tabular-nums;white-space:nowrap;color:var(--ink2)}
+.logt tr:last-child td{border-bottom:none}
+.logt td.k{font-weight:550;color:var(--ink);white-space:normal}
+.logwrap{overflow-x:auto;border:1px solid var(--line);border-radius:9px}
+
+/* ---------- saved batches ---------- */
+.sv{width:100%;background:var(--srf);border:1px solid var(--line);border-radius:9px;padding:10px 12px;
+  margin-bottom:8px;display:flex;align-items:center;gap:12px;transition:border-color .13s}
+.sv:hover{border-color:#cfd6de}
+.sv>span:first-child{display:flex;flex-direction:column;gap:1px;min-width:0;flex:1}
+.sv .nm{display:block;font-size:13px;font-weight:570;color:var(--ink);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;letter-spacing:-.008em}
+.sv .wh{display:block;font-size:11px;color:var(--mut2);font-variant-numeric:tabular-nums}
+.sv .sva{display:flex;gap:6px;flex:0 0 auto}
+.sv .sva .b-slate{color:var(--mut)}
+.sv .sva .b-slate:hover{color:var(--red);border-color:var(--redb);background:var(--reds)}
+
+/* ---------- modals ---------- */
+.ov{position:fixed;inset:0;background:rgba(11,15,20,.42);backdrop-filter:blur(2px);display:none;
+  align-items:center;justify-content:center;padding:20px;z-index:100}
+.ov.on{display:flex}
+.mod{background:var(--srf);border-radius:13px;max-width:508px;width:100%;max-height:88vh;display:flex;flex-direction:column;
+  box-shadow:0 18px 44px rgba(11,15,20,.2),0 2px 8px rgba(11,15,20,.09);animation:pop .16s cubic-bezier(.2,.8,.3,1)}
+.mod.wide{max-width:820px}
+@keyframes pop{from{opacity:0;transform:translateY(10px) scale(.985)}to{opacity:1;transform:none}}
+.mod-hd{padding:15px 18px;display:flex;align-items:center;gap:12px;color:#fff;flex:0 0 auto}
+.h-err{background:var(--red)}
+.h-ok{background:var(--ac)}
+.h-info{background:var(--ink)}
+.mod-hd .mi{width:30px;height:30px;border-radius:8px;background:rgba(255,255,255,.16);display:flex;
+  align-items:center;justify-content:center;flex:0 0 auto}
+.mod-hd h2{font-size:14px;font-weight:600;letter-spacing:-.01em}
+.mod-hd p{font-size:11.5px;opacity:.82;margin-top:1px}
+.mod-hd .x{margin-left:auto;background:rgba(255,255,255,.14);border:none;color:#fff;width:27px;height:27px;
+  border-radius:7px;cursor:pointer;display:flex;align-items:center;justify-content:center;flex:0 0 auto;transition:background .13s}
+.mod-hd .x:hover{background:rgba(255,255,255,.26)}
+.mod-bd{padding:20px 18px;overflow-y:auto;flex:1}
+.mod-ft{padding:13px 18px;border-top:1px solid var(--line);display:flex;justify-content:flex-end;gap:8px;
+  background:var(--srf2);flex:0 0 auto}
+.iss{display:flex;gap:11px;padding:12px 13px;border-radius:9px;background:var(--reds);border:1px solid var(--redb);
+  border-left:3px solid var(--red);margin-bottom:9px}
+.iss.w{background:var(--ambs);border-color:var(--ambb);border-left-color:var(--amb)}
+.iss .ii{width:17px;height:17px;flex:0 0 auto;margin-top:2px}
+.iss .it{font-size:12.5px;font-weight:600;margin-bottom:3px;letter-spacing:-.008em}
+.iss .id{font-size:12px;color:var(--ink2);line-height:1.55}
+.iss .ih{font-size:11.5px;color:var(--ac2);font-weight:550;margin-top:6px}
+
+/* ---------- guide ---------- */
+.gsec{margin-bottom:22px}
+.gsec h3{font-size:13px;font-weight:620;margin-bottom:8px;display:flex;align-items:center;gap:9px;letter-spacing:-.008em}
+.gsec p{font-size:13px;color:var(--ink2);margin-bottom:9px;line-height:1.65}
+.gsec p b{font-weight:600;color:var(--ink)}
+.gstep{display:flex;gap:12px;margin-bottom:13px}
+.gn{width:22px;height:22px;border-radius:6px;background:var(--srf2);border:1px solid var(--line);color:var(--mut);
+  font-size:11px;font-weight:600;display:flex;align-items:center;justify-content:center;flex:0 0 auto;
+  font-variant-numeric:tabular-nums}
+.gstep h4{font-size:12.5px;font-weight:600;margin-bottom:4px;letter-spacing:-.008em}
+.gstep ul{margin-left:16px} .gstep li{font-size:12.5px;color:var(--ink2);margin-bottom:3px;line-height:1.6}
+.warnbox{background:var(--ambs);border:1px solid var(--ambb);border-left:3px solid var(--amb);border-radius:9px;padding:12px 14px;margin-bottom:18px}
+.warnbox p{font-size:12.5px;color:#7a3a08;margin:0;line-height:1.6}
+
+/* ---------- footer ---------- */
+.ft{padding:16px 28px;background:var(--srf2);border-top:1px solid var(--line);display:flex;justify-content:space-between;
+  gap:14px;font-size:11.5px;color:var(--mut2);flex-wrap:wrap}
+.ft .w{color:var(--amb);font-weight:550}
+.mut{color:var(--mut)}
+.center{text-align:center}
+
+/* ---------- narrow screens ---------- */
+@media (max-width:640px){
+  .page{padding:14px 12px 40px}
+  .hd,.tb,.sec,.ft{padding-left:16px;padding-right:16px}
+  .hd h1{font-size:17px}
+  .row3,.row2{grid-template-columns:1fr}
+  .tiles{grid-template-columns:1fr}
+  .rep{padding:16px 14px}
+}
+
+/* ---------- age gate ---------- */
+.ov-age{z-index:200;background:rgba(11,15,20,.62)}
+.ov-age .mod{max-width:420px}
+.age-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:16px}
+.age-blocked{display:none;padding:28px 18px;text-align:center}
+.age-blocked h3{font-size:16px;margin-bottom:8px}
+.age-blocked p{font-size:13px;color:var(--ink2);line-height:1.6}
+body.age-locked .page{visibility:hidden}
+
+/* ---------- cookie banner ---------- */
+.ckbar{position:fixed;left:16px;right:16px;bottom:16px;z-index:180;display:none;
+  max-width:720px;margin:0 auto;background:var(--srf);border:1px solid var(--line);
+  border-radius:14px;box-shadow:0 18px 44px rgba(11,15,20,.18),0 2px 8px rgba(11,15,20,.08);
+  padding:16px 18px}
+.ckbar.on{display:block}
+.ckbar h3{font-size:14px;font-weight:650;letter-spacing:-.01em;margin-bottom:4px}
+.ckbar p{font-size:12.5px;color:var(--ink2);line-height:1.55;margin-bottom:12px}
+.ckbar .ckrow{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.ckbar .ckrow .sp{margin-left:auto}
+.ckopt{display:none;grid-template-columns:1fr;gap:8px;margin:0 0 12px}
+.ckopt.on{display:grid}
+.ckopt .ck{margin:0}
+@media (max-width:640px){
+  .ckbar{left:10px;right:10px;bottom:10px;padding:14px}
+  .ckbar .ckrow .sp{margin-left:0;flex-basis:100%}
+}
+
+/* ---------- print ---------- */
+@media print{
+  body{background:#fff;font-size:11.5px}
+  .no-print{display:none !important}
+  .page{max-width:none;padding:0}
+  .card{box-shadow:none;border:none;border-radius:0}
+  .hd{padding:0 0 10px;border-bottom:1.5px solid var(--ink)}
+  .hd h1{font-size:17px}
+  .sec{padding:12px 0;page-break-inside:avoid}
+  .sec + .sec{border-top:1px solid #d8dde3}
+  .rc,.st,.tt,.ch,.rep,table.bd,.logwrap{border-color:#c6ccd4 !important;background:#fff !important}
+  .tt.big{background:#fff !important}
+  table.bd th,.logt th,tr.tot td{background:#f4f6f8 !important}
+  .ov,.ckbar{display:none !important}
+  .charts{grid-template-columns:1fr 1fr;gap:8px}
+  .ft{background:#fff !important;padding:10px 0 0}
+}
+</style>
+</head>
+<body>
+<div class="page">
+<div class="card">
+
+  <div class="hd">
+    <div class="lg"><img src="data:image/webp;base64,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" alt="GummyLogics logo"></div>
+    <div><h1><span class="g1">Gummy</span><span class="g2">Logics</span><span class="sub">Infused Gummy Calculator &middot; material planning &middot; production cost &middot; cure &amp; waste log</span></h1></div>
+    <span class="v">V4.0</span>
+  </div>
+
+  <div class="tb no-print">
+    <button class="btn b-green" id="btnCalc"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>Calculate</button>
+    <button class="btn b-indigo" id="btnGuide"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>Recipe Guide</button>
+    <span class="sp"></span>
+    <button class="btn b-purple act-save"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>Save</button>
+    <button class="btn b-blue act-export"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Export</button>
+    <button class="btn b-teal act-print"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>Print</button>
+    <button class="btn b-amber act-copy"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copy</button>
+    <button class="btn b-slate act-reset"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12a9 9 0 1 0 9-9 9 9 0 0 0-6.36 2.64L3 8"/><polyline points="3 3 3 8 8 8"/></svg>Reset</button>
+  </div>
+
+  <!-- ============ 1. BATCH SETUP ============ -->
+  <div class="sec no-print">
+    <div class="sec-hd"><div class="bar"></div><h2>Batch Setup</h2></div>
+    <p class="sec-sub">Tap any tile to open its inputs. Green dot means filled &mdash; everything else back-calculates to match.</p>
+    <div class="tiles" id="tiles1"></div>
+  </div>
+
+  <!-- ============ 2. MATERIAL CALCULATION ============ -->
+  <div class="sec">
+    <div class="sec-hd"><div class="bar" style="background:var(--green)"></div><h2>Material Calculation</h2></div>
+    <p class="sec-sub" id="matSub">Weigh to these numbers.</p>
+    <div class="cards" id="matCards">
+      <div class="rc c-blue"><div class="k">Raw Gummy Base</div><div class="v" id="oGum">&mdash;</div><div class="s" id="oGumS">&nbsp;</div></div>
+      <div class="rc c-green"><div class="k">THC Extract</div><div class="v" id="oRos">&mdash;</div><div class="s" id="oRosS">&nbsp;</div></div>
+      <div class="rc c-purple"><div class="k">Liquid Lecithin</div><div class="v" id="oLec">&mdash;</div><div class="s" id="oLecS">&nbsp;</div></div>
+      <div class="rc c-amber"><div class="k">Total Batch Size</div><div class="v" id="oBatch">&mdash;</div><div class="s" id="oBatchS">&nbsp;</div></div>
+      <div class="rc c-red"><div class="k">Mold Inhibitor (Potassium Sorbate)</div><div class="v" id="oDrops">&mdash;</div><div class="s" id="oDropsS">&nbsp;</div></div>
+      <div class="rc c-ink span3"><div class="k">Batch Plan</div><div class="v" id="oYield">&mdash;</div><div class="s" id="oYieldS">&nbsp;</div></div>
+    </div>
+    <div class="stats">
+      <div class="st"><div class="k">Total THC in Batch</div><div class="v" id="sThc">&mdash;</div><div class="s" id="sThcS">&nbsp;</div></div>
+      <div class="st"><div class="k">Gummy Base Weight</div><div class="v" id="sLb">&mdash;</div><div class="s" id="sLbS">&nbsp;</div></div>
+      <div class="st"><div class="k">Extract Load</div><div class="v" id="sLoad">&mdash;</div><div class="s">% of batch mass</div></div>
+      <div class="st"><div class="k">Extract per Gummy</div><div class="v" id="sRpg">&mdash;</div><div class="s">grams of extract each</div></div>
+    </div>
+  </div>
+
+  <!-- ============ 3. PRODUCTION COST ============ -->
+  <div class="sec no-print">
+    <div class="sec-hd"><div class="bar" style="background:var(--amber)"></div><h2>Production Cost Analysis</h2></div>
+    <p class="sec-sub">Every line is optional. Quantities pull from the Material Calculation automatically. Open <b>Additional Costs</b> to add your own line items.</p>
+    <div class="tiles" id="tiles2"></div>
+  </div>
+
+  <!-- ============ 4. FINISHED BATCH & CURE ============ -->
+  <div class="sec no-print">
+    <div class="sec-hd"><div class="bar" style="background:var(--teal)"></div><h2>Finished Batch &amp; Cure Log</h2></div>
+    <p class="sec-sub">Fill this in after demolding and curing. Drives true waste percentage and builds your production record.</p>
+    <div class="tiles" id="tiles3"></div>
+    <div class="stats" id="cureStats" style="margin-top:13px">
+      <div class="st"><div class="k">Unit Waste</div><div class="v" id="yWaste">&mdash;</div><div class="s" id="yWasteS">planned vs finished</div></div>
+      <div class="st"><div class="k">Mass Loss in Cure</div><div class="v" id="yMass">&mdash;</div><div class="s" id="yMassS">batch vs finished weight</div></div>
+      <div class="st"><div class="k">Water in Finished</div><div class="v" id="yWater">&mdash;</div><div class="s" id="yWaterS">from water content</div></div>
+      <div class="st"><div class="k">Dry Solids</div><div class="v" id="ySolid">&mdash;</div><div class="s" id="ySolidS">after cure</div></div>
+    </div>
+  </div>
+
+  <!-- ============ 5. REPORT ============ -->
+  <div class="sec">
+    <div class="sec-hd"><div class="bar" style="background:var(--brand2)"></div><h2>Batch Report</h2></div>
+    <p class="sec-sub no-print">Press <b>Calculate</b> to validate every input and refresh this report.</p>
+    <div class="rep">
+      <h3><span class="bar"></span>Cost Report</h3>
+      <div class="tgrid">
+        <div class="tt big"><div class="k">Total Batch Cost</div><div class="v" id="tTotal">&mdash;</div><div class="s" id="tTotalS">all filled lines</div></div>
+        <div class="tt"><div class="k">Cost per Gummy</div><div class="v" id="tPer">&mdash;</div><div class="s" id="tPerS">&nbsp;</div></div>
+        <div class="tt"><div class="k">True Cost per Finished Pack</div><div class="v" id="tPack">&mdash;</div><div class="s" id="tPackS">&nbsp;</div></div>
+        <div class="tt"><div class="k">Cost per mg THC</div><div class="v" id="tMg">&mdash;</div><div class="s" id="tMgS">&nbsp;</div></div>
+      </div>
+
+      <div class="charts" id="charts">
+        <div class="ch"><h4>Cost Share by Line Item</h4><div class="body" id="chCost"><p class="mut" style="font-size:12px">Fill in cost lines and press Calculate.</p></div></div>
+        <div class="ch"><h4>Batch Mass Composition</h4><div class="body" id="chMass"><p class="mut" style="font-size:12px">Press Calculate.</p></div></div>
+        <div class="ch"><h4>Cost per Line Item</h4><div class="body" id="chBars"><p class="mut" style="font-size:12px">Fill in cost lines and press Calculate.</p></div></div>
+        <div class="ch"><h4>Yield &amp; Waste</h4><div class="body" id="chYield"><p class="mut" style="font-size:12px">Fill in the Finished Batch log.</p></div></div>
+      </div>
+
+      <table class="bd">
+        <thead><tr><th>Line Item</th><th class="r">Quantity</th><th class="r">Unit Cost</th><th class="r">Cost</th><th class="r">Share</th></tr></thead>
+        <tbody id="tBody"><tr><td colspan="5" class="mut center" style="padding:18px">No cost inputs filled yet.</td></tr></tbody>
+      </table>
+    </div>
+
+    <div class="tb no-print" style="border:none;background:none;padding:15px 0 0;justify-content:center">
+      <button class="btn b-green lg" id="btnCalc2"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>Calculate</button>
+      <button class="btn b-purple act-save">Save</button>
+      <button class="btn b-blue act-export">Export</button>
+      <button class="btn b-teal act-print">Print</button>
+      <button class="btn b-amber act-copy">Copy</button>
+      <button class="btn b-slate act-reset">Reset</button>
+    </div>
+  </div>
+
+  <!-- ============ 6. CURE LOG TABLE ============ -->
+  <div class="sec" id="logSec" style="display:none">
+    <div class="sec-hd"><div class="bar" style="background:var(--teal)"></div><h2>Cure &amp; Waste Record</h2></div>
+    <p class="sec-sub">Documented conditions for this batch. Export or print to keep it in your production log.</p>
+    <div class="logwrap"><table class="logt" id="logTable"></table></div>
+  </div>
+
+  <!-- ============ SAVED ============ -->
+  <div class="sec no-print" id="svWrap" style="display:none">
+    <div class="sec-hd"><div class="bar" style="background:var(--amber)"></div><h2>Saved Batches</h2></div>
+    <p class="sec-sub">Stored in this browser. Click to reload every input.</p>
+    <div id="svList"></div>
+  </div>
+
+  <div class="ft">
+    <span>&copy; <span id="yr"></span> GummyLogics &middot; Infused gummy production calculator
+      &middot; <button type="button" class="btn sm b-slate" id="btnCookiePrefs" style="padding:2px 8px;font-size:11px;vertical-align:middle">Cookie settings</button></span>
+    <span class="w">Keep temperature below 180&deg;F when melting to preserve potency</span>
+  </div>
+</div>
+</div>
+
+<!-- ============ HIDDEN INPUT GROUPS ============ -->
+<div id="grpHolder">
+
+  <div class="grp" id="g_name">
+    <div class="f"><label for="batchName">Batch Name <span class="o">OPTIONAL</span></label>
+      <input type="text" id="batchName" placeholder="e.g. Purple Punch Batch #1">
+      <p class="h">Shows up on the report, the export file, and your saved batch list.</p></div>
+  </div>
+
+  <div class="grp" id="g_mode">
+    <div class="modes">
+      <label class="mode on" data-mode="count"><input type="radio" name="sm" value="count" checked><span><span class="mn">Target gummy count</span><span class="md">I want to make N gummies. Solve for all materials.</span></span></label>
+      <label class="mode" data-mode="gummy"><input type="radio" name="sm" value="gummy"><span><span class="mn">Limited by gummy base</span><span class="md">I have X grams of raw gummies. How many can I make?</span></span></label>
+      <label class="mode" data-mode="rosin"><input type="radio" name="sm" value="rosin"><span><span class="mn">Limited by extract on hand</span><span class="md">I have X grams of extract. How many can I make?</span></span></label>
+    </div>
+    <div class="f drv" data-drv="count"><label for="numGummies">Number of Gummies</label>
+      <input type="number" id="numGummies" value="100" min="1" step="1">
+      <p class="h">Finished gummies you want out of this batch.</p></div>
+    <div class="f drv" data-drv="gummy" style="display:none"><label for="availGummy">Raw Gummy Base on Hand (g)</label>
+      <input type="number" id="availGummy" value="454" min="0" step="0.1">
+      <p class="h">A 1 lb bag is 453.6 g; a 5 lb bag is 2268 g.</p></div>
+    <div class="f drv" data-drv="rosin" style="display:none"><label for="availRosin">Extract on Hand (g)</label>
+      <input type="number" id="availRosin" value="5" min="0" step="0.01">
+      <p class="h">Weight of the extract you actually have, after decarboxylation if that applies to your material.</p></div>
+  </div>
+
+  <div class="grp" id="g_core">
+    <div class="f"><label for="moldSize">Mold Size (g per gummy)</label>
+      <input type="number" id="moldSize" value="3.75" min="0" step="0.01">
+      <p class="h">Weight of each finished gummy. Typical 3&ndash;4 g.</p></div>
+    <div class="f"><label for="thcPerGummy">Target THC (mg per gummy)</label>
+      <input type="number" id="thcPerGummy" value="25" min="0" step="0.1">
+      <p class="h">Potency you are dosing each gummy to.</p></div>
+    <div class="f"><label for="infusionMaterial">Infusion Material <span class="o">OPTIONAL</span></label>
+      <input type="text" id="infusionMaterial" placeholder="e.g. Live Rosin, Distillate, RSO, Isolate, Live Resin">
+      <p class="h">What extract you're using this batch. Shown on your saved batch list and report for your own reference &mdash; it does not change the math.</p></div>
+    <div class="f"><label for="rosinPct">Extract THC (%)</label>
+      <input type="number" id="rosinPct" value="75" min="0" max="100" step="0.1">
+      <p class="h">Total THC percentage from your COA, after decarboxylation if that applies to your material.</p></div>
+  </div>
+
+  <div class="grp" id="g_adv">
+    <div class="f"><label for="lossPct">Extra Extract Buffer (%) <span class="o">OPTIONAL &middot; LEAVE AT 0</span></label>
+      <input type="number" id="lossPct" value="0" min="0" max="95" step="0.5">
+      <p class="h">A cushion for extract that never reaches a gummy &mdash; residue on the pot, spatula, and parchment. At 0 the tool doses your extract at face value. Set 10 and it adds about 11% more extract so the target dose still lands after that loss. Only raise this if a lab result told you a batch came in under target, or if you deliberately want to dose a little high.</p></div>
+    <div class="f"><label for="lecRatio">Lecithin Ratio (%) <span class="o">OPTIONAL</span></label>
+      <input type="number" id="lecRatio" value="0.232" min="0" max="20" step="0.001">
+      <p class="h">Percent of gummy-side mass. Beta default was 0.232%.</p></div>
+    <div class="f"><label for="overage">Overage / Waste (%) <span class="o">OPTIONAL</span></label>
+      <input type="number" id="overage" value="0" min="0" max="100" step="0.5">
+      <p class="h">Extra batch volume to cover pan residue and scrape loss.</p></div>
+  </div>
+
+  <div class="grp" id="g_ros">
+    <div class="row3">
+      <div class="f"><label for="pRos">Total Price Paid ($)</label><input type="number" id="pRos" placeholder="0.00" min="0" step="0.01"></div>
+      <div class="f"><label for="qRos">Amount for That Price</label><input type="number" id="qRos" value="1" min="0" step="0.001"></div>
+      <div class="f"><label for="uRos">Unit</label><select id="uRos"><option value="g">gram</option><option value="oz" selected>ounce</option><option value="lb">pound</option></select></div>
+    </div>
+    <p class="h">Enter it as a rate &mdash; e.g. $35 for 1 gram, or $420 for 1 ounce. Quantity consumed comes from the Material Calculation.</p>
+    <div class="gout"><span class="pill">Cost per gram <b id="xRosG">&mdash;</b></span><span class="pill">Batch uses <b id="xRosQ">&mdash;</b></span><span class="pill hero">Batch cost <b id="xRosC">&mdash;</b></span></div>
+  </div>
+
+  <div class="grp" id="g_gum">
+    <div class="row3">
+      <div class="f"><label for="pGum">Total Price Paid ($)</label><input type="number" id="pGum" placeholder="0.00" min="0" step="0.01"></div>
+      <div class="f"><label for="qGum">Amount for That Price</label><input type="number" id="qGum" value="5" min="0" step="0.001"></div>
+      <div class="f"><label for="uGum">Unit</label><select id="uGum"><option value="g">gram</option><option value="oz">ounce</option><option value="lb" selected>pound</option></select></div>
+    </div>
+    <p class="h">Enter it as a rate &mdash; e.g. $24.99 for a 5 pound bag. "Batch cost" below is only the grams this specific batch actually consumes, not the whole bag &mdash; if this batch does not use the entire bag, batch cost will legitimately be less than what you paid for it. Any unused portion left in the bag is shown as leftover below so every cent of what you paid is still accounted for.</p>
+    <div class="gout"><span class="pill">Cost per gram <b id="xGumG">&mdash;</b></span><span class="pill">Batch uses <b id="xGumQ">&mdash;</b></span><span class="pill hero">Batch cost <b id="xGumC">&mdash;</b></span><span class="pill warn" id="xGumLeftWrap" style="display:none">Leftover in bag <b id="xGumLeft">&mdash;</b></span></div>
+  </div>
+
+  <div class="grp" id="g_pack">
+    <div class="row3">
+      <div class="f"><label for="pPack">Total Price Paid ($)</label><input type="number" id="pPack" placeholder="0.00" min="0" step="0.01"></div>
+      <div class="f"><label for="qPack">Pieces Received</label><input type="number" id="qPack" placeholder="0" min="0" step="1"></div>
+      <div class="f"><label for="nPerPack">Gummies per Package</label><input type="number" id="nPerPack" placeholder="0" min="0" step="1"></div>
+    </div>
+    <p class="h">Bags, jars, or tins. Pieces needed is based on finished count when you log one, otherwise the planned count.</p>
+    <div class="gout"><span class="pill">Per piece <b id="xPackP">&mdash;</b></span><span class="pill">Pieces needed <b id="xPackN">&mdash;</b></span><span class="pill hero">Batch cost <b id="xPackC">&mdash;</b></span></div>
+  </div>
+
+  <div class="grp" id="g_lbl">
+    <div class="row3">
+      <div class="f"><label for="pLbl">Total Price Paid ($)</label><input type="number" id="pLbl" placeholder="0.00" min="0" step="0.01"></div>
+      <div class="f"><label for="qLbl">Labels Received</label><input type="number" id="qLbl" placeholder="0" min="0" step="1"></div>
+      <div class="f"><label for="wLbl">Labels Used in Batch</label><input type="number" id="wLbl" placeholder="0" min="0" step="1"></div>
+    </div>
+    <label class="ck"><input type="checkbox" id="aLbl" checked> Auto-fill one label per package — <span id="aLblV">enter packaging first</span>. Uncheck to enter your own count.</label>
+    <p class="h">Compliance or brand labels for the finished product. Auto-fill uses the package count from the Packaging tile &mdash; raise it by hand if each package takes more than one label.</p>
+    <div class="gout"><span class="pill">Per label <b id="xLblP">&mdash;</b></span><span class="pill">Labels needed <b id="xLblN">&mdash;</b></span><span class="pill hero">Batch cost <b id="xLblC">&mdash;</b></span></div>
+  </div>
+
+  <div class="grp" id="g_mct">
+    <div class="row3">
+      <div class="f"><label for="pMct">Total Price Paid ($)</label><input type="number" id="pMct" placeholder="0.00" min="0" step="0.01"></div>
+      <div class="f"><label for="qMct">Container Size</label><input type="number" id="qMct" placeholder="0" min="0" step="0.01"></div>
+      <div class="f"><label for="uMct">Unit</label><select id="uMct"><option value="g">gram</option><option value="oz" selected>ounce</option><option value="lb">pound</option></select></div>
+    </div>
+    <div class="f"><label for="wMct">Used in Batch</label><div class="pair"><input type="number" id="wMct" placeholder="0" min="0" step="0.01"><select id="vMct"><option value="g" selected>gram</option><option value="oz">ounce</option><option value="lb">pound</option></select></div></div>
+    <div class="gout"><span class="pill">Cost per gram <b id="xMctG">&mdash;</b></span><span class="pill">Batch uses <b id="xMctQ">&mdash;</b></span><span class="pill hero">Batch cost <b id="xMctC">&mdash;</b></span></div>
+  </div>
+
+  <div class="grp" id="g_lec">
+    <div class="row3">
+      <div class="f"><label for="pLec">Total Price Paid ($)</label><input type="number" id="pLec" placeholder="0.00" min="0" step="0.01"></div>
+      <div class="f"><label for="qLec">Container Size</label><input type="number" id="qLec" placeholder="0" min="0" step="0.01"></div>
+      <div class="f"><label for="uLec">Unit</label><select id="uLec"><option value="g">gram</option><option value="oz" selected>ounce</option><option value="lb">pound</option></select></div>
+    </div>
+    <div class="f"><label for="wLec">Used in Batch</label><div class="pair"><input type="number" id="wLec" placeholder="0" min="0" step="0.001"><select id="vLec"><option value="g" selected>gram</option><option value="oz">ounce</option><option value="lb">pound</option></select></div></div>
+    <label class="ck"><input type="checkbox" id="aLec" checked> Auto-fill from the material calculation (<span id="aLecV">&mdash;</span>). Uncheck to enter your own amount.</label>
+    <div class="gout"><span class="pill">Cost per gram <b id="xLecG">&mdash;</b></span><span class="pill">Batch uses <b id="xLecQ">&mdash;</b></span><span class="pill hero">Batch cost <b id="xLecC">&mdash;</b></span></div>
+  </div>
+
+  <div class="grp" id="g_sug">
+    <div class="row3">
+      <div class="f"><label for="pSug">Total Price Paid ($)</label><input type="number" id="pSug" placeholder="0.00" min="0" step="0.01"></div>
+      <div class="f"><label for="qSug">Package Size</label><input type="number" id="qSug" placeholder="0" min="0" step="0.01"></div>
+      <div class="f"><label for="uSug">Unit</label><select id="uSug"><option value="g">gram</option><option value="oz">ounce</option><option value="lb" selected>pound</option></select></div>
+    </div>
+    <div class="f"><label for="wSug">Used in Batch</label><div class="pair"><input type="number" id="wSug" placeholder="0" min="0" step="0.01"><select id="vSug"><option value="g" selected>gram</option><option value="oz">ounce</option><option value="lb">pound</option></select></div></div>
+    <div class="gout"><span class="pill">Cost per gram <b id="xSugG">&mdash;</b></span><span class="pill">Batch uses <b id="xSugQ">&mdash;</b></span><span class="pill hero">Batch cost <b id="xSugC">&mdash;</b></span></div>
+  </div>
+
+  <div class="grp" id="g_sorb">
+    <div class="row3">
+      <div class="f"><label for="pSorb">Total Price Paid ($)</label><input type="number" id="pSorb" placeholder="0.00" min="0" step="0.01"></div>
+      <div class="f"><label for="qSorb">Container Size</label><input type="number" id="qSorb" placeholder="0" min="0" step="0.01"></div>
+      <div class="f"><label for="uSorb">Unit</label><select id="uSorb"><option value="g" selected>gram</option><option value="oz">ounce</option><option value="lb">pound</option></select></div>
+    </div>
+    <div class="f"><label for="wSorb">Drops Used</label><input type="number" id="wSorb" placeholder="0" min="0" step="1">
+      <p class="h">Each drop weighs 0.05 g.</p></div>
+    <label class="ck"><input type="checkbox" id="aSorb" checked> Auto-fill from the material calculation (<span id="aSorbV">&mdash;</span>). Uncheck to enter your own count.</label>
+    <div class="gout"><span class="pill">Cost per gram <b id="xSorbG">&mdash;</b></span><span class="pill">Per drop <b id="xSorbD">&mdash;</b></span><span class="pill">Batch uses <b id="xSorbQ">&mdash;</b></span><span class="pill hero">Batch cost <b id="xSorbC">&mdash;</b></span></div>
+  </div>
+
+  <div class="grp" id="g_test">
+    <div class="row2">
+      <div class="f"><label for="lTest">Lab / Panel Description <span class="o">OPTIONAL</span></label><input type="text" id="lTest" placeholder="e.g. potency + microbial panel"></div>
+      <div class="f"><label for="qTest">Number of Tests</label><input type="number" id="qTest" placeholder="1" min="0" step="1"></div>
+    </div>
+    <div class="f"><label for="pTest">Cost per Test ($)</label><input type="number" id="pTest" placeholder="0.00" min="0" step="0.01"></div>
+    <p class="h">A flat batch expense. It changes no weight in the recipe, only the cost report. Leave the test count blank and it is treated as one test.</p>
+    <div class="gout"><span class="pill">Tests <b id="xTestN">&mdash;</b></span><span class="pill">Per gummy <b id="xTestG">&mdash;</b></span><span class="pill hero">Batch cost <b id="xTestC">&mdash;</b></span></div>
+  </div>
+
+  <div class="grp" id="g_misc">
+    <div class="row2">
+      <div class="f"><label for="lMisc">Item Description</label><input type="text" id="lMisc" placeholder="e.g. citric acid, flavor drops, terpenes"></div>
+      <div class="f"><label for="pMisc">Total Price Paid ($)</label><input type="number" id="pMisc" placeholder="0.00" min="0" step="0.01"></div>
+    </div>
+    <div class="row3">
+      <div class="f"><label for="qMisc">Package Size</label><input type="number" id="qMisc" placeholder="0" min="0" step="0.01"></div>
+      <div class="f"><label for="uMisc">Unit</label><select id="uMisc"><option value="g" selected>gram</option><option value="oz">ounce</option><option value="lb">pound</option></select></div>
+      <div class="f"><label for="wMisc">Used in Batch</label><div class="pair"><input type="number" id="wMisc" placeholder="0" min="0" step="0.01"><select id="vMisc"><option value="g" selected>gram</option><option value="oz">ounce</option><option value="lb">pound</option></select></div></div>
+    </div>
+    <p class="h">All four fields are needed for this line to count: description, price, package size, and amount used.</p>
+    <div class="gout"><span class="pill">Cost per gram <b id="xMiscG">&mdash;</b></span><span class="pill">Batch uses <b id="xMiscQ">&mdash;</b></span><span class="pill hero">Batch cost <b id="xMiscC">&mdash;</b></span><span class="pill warn" id="xMiscNote" style="display:none">Fill all four fields to include this line</span></div>
+    <div id="xtraWrap"></div>
+    <button type="button" class="btn addln" id="btnAddLine">+ Add another cost line</button>
+    <p class="h">Add as many extra lines as you need &mdash; delivery, licensing, flavoring, terpenes, anything not already covered. Each line flows into the cost report, the charts and the exported batch record.</p>
+  </div>
+
+  <div class="grp" id="g_labor">
+    <div class="row3">
+      <div class="f"><label for="pLaborRate">Labor Rate ($/hr)</label><input type="number" id="pLaborRate" placeholder="0.00" min="0" step="0.01"></div>
+      <div class="f"><label for="tProdStart">Production Start Time</label><input type="time" id="tProdStart"></div>
+      <div class="f"><label for="tProdEnd">Production Finish Time</label><input type="time" id="tProdEnd"></div>
+    </div>
+    <div class="f"><label for="dProdManual">Or Enter Production Duration Directly (hours) <span class="o">OPTIONAL</span></label>
+      <input type="number" id="dProdManual" placeholder="0" min="0" step="0.01">
+      <p class="h">Use this instead of the clock times above if you did not log a start and finish time.</p></div>
+    <div class="row2">
+      <div class="f"><label for="tPackStart">Packaging Start Time (fill &amp; label)</label><input type="time" id="tPackStart"></div>
+      <div class="f"><label for="tPackEnd">Packaging Finish Time</label><input type="time" id="tPackEnd"></div>
+    </div>
+    <div class="f"><label for="dPackManual">Or Enter Packaging Duration Directly (hours) <span class="o">OPTIONAL</span></label>
+      <input type="number" id="dPackManual" placeholder="0" min="0" step="0.01"></div>
+    <p class="h">Set one hourly labor rate, then log the clock time (or a plain duration in hours) spent mixing/molding the batch, and separately spent filling &amp; labeling packages. Both flow into the total batch cost and the true cost per finished pack.</p>
+    <div class="gout"><span class="pill">Production time <b id="xProdHrs">&mdash;</b></span><span class="pill hero">Production labor <b id="xProdC">&mdash;</b></span></div>
+    <div class="gout"><span class="pill">Packaging time <b id="xPackHrs">&mdash;</b></span><span class="pill hero">Packaging labor <b id="xPackLaborC">&mdash;</b></span></div>
+  </div>
+
+  <div class="grp" id="g_box">
+    <div class="row3">
+      <div class="f"><label for="pBoxBulk">Bulk Box Price ($)</label><input type="number" id="pBoxBulk" placeholder="0.00" min="0" step="0.01"></div>
+      <div class="f"><label for="qBoxBulk">Boxes in That Purchase</label><input type="number" id="qBoxBulk" placeholder="0" min="0" step="1"></div>
+      <div class="f"><label for="nPacksPerBox">Finished Packs per Box</label><input type="number" id="nPacksPerBox" placeholder="0" min="0" step="1"></div>
+    </div>
+    <p class="h">The outer shipping/retail box or case that holds several finished packages &mdash; e.g. $18.00 for a bulk case of 50 boxes, 10 finished packs per box. Boxes needed is based on the package count from the Packaging tile.</p>
+    <div class="gout"><span class="pill">Per box <b id="xBoxP">&mdash;</b></span><span class="pill">Boxes needed <b id="xBoxN">&mdash;</b></span><span class="pill hero">Batch cost <b id="xBoxC">&mdash;</b></span></div>
+  </div>
+
+  <div class="grp" id="g_fin">
+    <div class="f"><label for="actual">Number of Finished Gummies</label>
+      <input type="number" id="actual" placeholder="leave blank to use planned count" min="0" step="1">
+      <p class="h">Real sellable count after demolding and curing. Drives true cost per gummy and the waste percentage.</p></div>
+    <div class="f"><label for="actualMass">Finished Batch Weight (g) <span class="o">OPTIONAL</span></label>
+      <input type="number" id="actualMass" placeholder="0" min="0" step="0.1">
+      <p class="h">Weigh the finished cured gummies to measure mass loss separately from count loss.</p></div>
+  </div>
+
+  <div class="grp" id="g_cure">
+    <div class="f"><label for="curDur">Duration of Cure <span class="o">OPTIONAL</span></label>
+      <div class="pair"><input type="number" id="curDur" placeholder="0" min="0" step="0.5">
+        <select id="curUnit"><option value="h">hours</option><option value="d" selected>days</option></select></div>
+      <p class="h">How long the gummies sat curing before you weighed and counted them.</p></div>
+    <div class="row2">
+      <div class="f"><label for="curTemp">Cure Room Temp <span class="o">OPTIONAL</span></label>
+        <div class="pair"><input type="number" id="curTemp" placeholder="0" step="0.5">
+          <select id="curTempU"><option value="F" selected>&deg;F</option><option value="C">&deg;C</option></select></div></div>
+      <div class="f"><label for="curRH">Cure Room Humidity (%) <span class="o">OPTIONAL</span></label>
+        <input type="number" id="curRH" placeholder="0" min="0" max="100" step="1"></div>
+    </div>
+    <p class="h">Logged on the report so you can compare runs later and find the conditions that give you the best yield.</p>
+  </div>
+
+  <div class="grp" id="g_moist">
+    <div class="f"><label for="wcPct">Water Content After Cure (%) <span class="o">OPTIONAL</span></label>
+      <input type="number" id="wcPct" placeholder="0" min="0" max="100" step="0.1">
+      <p class="h">Moisture remaining in the finished gummies. Combined with finished weight this separates water in the product from material you actually lost.</p></div>
+    <div class="f"><label for="curNote">Batch Notes <span class="o">OPTIONAL</span></label>
+      <input type="text" id="curNote" placeholder="e.g. slightly tacky, rolled in sugar at 36h">
+      <p class="h">Anything worth remembering. Carried into the export and the saved record.</p></div>
+  </div>
+
+</div>
+
+<!-- ============ PANEL MODAL ============ -->
+<div class="ov" id="ovPanel">
+  <div class="mod">
+    <div class="mod-hd h-info" id="panHd">
+      <div class="mi" id="panIc"></div>
+      <div><h2 id="panTitle">Input</h2><p id="panSub">&nbsp;</p></div>
+      <button class="x" data-close="ovPanel"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+    </div>
+    <div class="mod-bd" id="panBody"></div>
+    <div class="mod-ft">
+      <button class="btn b-slate" id="panClear">Clear this line</button>
+      <button class="btn b-indigo" data-close="ovPanel">Done</button>
+    </div>
+  </div>
+</div>
+
+<!-- ============ ERROR MODAL ============ -->
+<div class="ov" id="ovErr">
+  <div class="mod">
+    <div class="mod-hd h-err" id="errHd">
+      <div class="mi"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
+      <div><h2 id="errTitle">Check your inputs</h2><p id="errSub">Some values contradict each other</p></div>
+      <button class="x" data-close="ovErr"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+    </div>
+    <div class="mod-bd" id="errBody"></div>
+    <div class="mod-ft"><button class="btn b-slate" data-close="ovErr">Got it</button></div>
+  </div>
+</div>
+
+<!-- ============ GUIDE MODAL ============ -->
+<div class="ov" id="ovGuide">
+  <div class="mod wide">
+    <div class="mod-hd h-info">
+      <div class="mi"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
+      <div><h2>Recipe Guide &amp; Instructions</h2><p>Complete step-by-step methodology</p></div>
+      <button class="x" data-close="ovGuide"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+    </div>
+    <div class="mod-bd">
+      <div class="warnbox"><p><b>Temperature is the whole game.</b> Never exceed 180&deg;F. If you see steam rising, you are too hot and you are burning off terpenes and cannabinoids.</p></div>
+
+      <div class="gsec">
+        <h3><span class="bar" style="background:var(--brand)"></span>The Simplified Method</h3>
+        <p>Infused gummies stand out for potency and purity, but building them from scratch is time-consuming and technical to formulate correctly. This method starts from pre-made gummies and infuses them with liquid lecithin, MCT oil, and your THC extract of choice &mdash; rosin, distillate, RSO, isolate, or any other extract &mdash; so you skip gelatin blooming, preservative math, and complex formulation entirely.</p>
+        <p>By starting with professionally manufactured gummies you inherit their texture, flavor balance, and shelf stability &mdash; and you get unlimited flavor options from whatever bulk candy you can source.</p>
+      </div>
+
+      <div class="gsec">
+        <h3><span class="bar" style="background:var(--green)"></span>Step-by-Step</h3>
+        <div class="gstep"><span class="gn">1</span><div><h4>Prepare your workstation</h4><ul><li>Set up the double boiler on the hotplate for indirect heat</li><li>Use a precision scale for gummies and extract</li><li>Have an oven-safe glass jar (Pyrex works well) on hand for melting the extract mixture separately</li></ul></div></div>
+        <div class="gstep"><span class="gn">2</span><div><h4>Prepare the extract mixture</h4><ul><li>In the glass jar, warm your measured THC extract over low, indirect heat until fully melted into a liquid, stirring often to keep it from scorching</li><li>Stir in the lecithin until fully and evenly incorporated</li><li>Mix in the MCT oil, then set the jar aside &mdash; this is your extract mixture</li></ul></div></div>
+        <div class="gstep"><span class="gn">3</span><div><h4>Melt the gummies</h4><ul><li>Heat gently, stirring continuously</li><li>Never exceed 180&deg;F &mdash; steam means too hot</li><li>Continue until completely melted into a smooth liquid slurry</li><li>Optional: a little water compensates for moisture loss, but softens the final texture</li></ul></div></div>
+        <div class="gstep"><span class="gn">4</span><div><h4>Combine and dose</h4><ul><li>Once the gummy base is fully melted into a liquid slurry, slowly stream in your prepared extract mixture</li><li>Add your mold-inhibitor drops (potassium sorbate, 1 drop per 250 g of total mixture)</li><li>Add any optional citric acid, food coloring, and flavoring, then stir until fully combined</li></ul></div></div>
+        <div class="gstep"><span class="gn">5</span><div><h4>Homogenize</h4><ul><li>A hand mixer works well, or use an overhead mixer for hands-free consistency</li><li>15&ndash;20 minutes is typically enough</li><li>Thorough mixing is imperative &mdash; an under-mixed batch creates hot spots, leaving some gummies too strong and others too weak</li></ul></div></div>
+        <div class="gstep"><span class="gn">6</span><div><h4>Prepare and fill molds</h4><ul><li>Lightly coat the molds with demolding oil or cooking spray</li><li>Pour the slurry into the middle of each mold, staying away from the edges to avoid spilling over</li><li>Use a heated scraper to spread the slurry into every cavity, working quickly so it does not solidify before you finish spreading</li></ul></div></div>
+        <div class="gstep"><span class="gn">7</span><div><h4>Set the gummies</h4><ul><li>Let the molds sit undisturbed until fully solid</li><li>Refrigerating speeds this up; cover with plastic wrap to prevent surface drying</li><li>Set overnight, 8&ndash;12 hours minimum, for the most consistent texture</li></ul></div></div>
+        <div class="gstep"><span class="gn">8</span><div><h4>Demold, cure, and store</h4><ul><li>Demold carefully once fully set, coating in sanding sugar or carnauba wax to finish</li><li>Cure in a stable room and log the temperature, humidity, and duration</li><li>Airtight container, refrigerated</li></ul></div></div>
+      </div>
+
+      <div class="gsec">
+        <h3><span class="bar" style="background:var(--blue)"></span>Using the Three Solve Modes</h3>
+        <p><b>Target gummy count</b> &mdash; the classic forward calculation. You want 100 gummies; it tells you what to buy and weigh.</p>
+        <p><b>Limited by gummy base</b> &mdash; you have 454 g of Albanese left in the bag. It back-solves the largest whole-gummy batch that fits and tells you the leftover.</p>
+        <p><b>Limited by extract on hand</b> &mdash; you have 5 g of extract and that is all you have. It back-solves how many gummies you can dose at your target potency.</p>
+        <p>In both limited modes the count is floored to a whole gummy, then every other material is recomputed from that whole number, so the recipe you get is always actually mixable.</p>
+      </div>
+
+      <div class="gsec">
+        <h3><span class="bar" style="background:var(--teal)"></span>Reading the Cure &amp; Waste Log</h3>
+        <p><b>Unit waste</b> compares finished count to planned count. This is your headline number &mdash; broken gummies, mold overfill, pieces that stuck.</p>
+        <p><b>Mass loss in cure</b> compares finished weight to total batch mass. During a cure most of this is water leaving the product, which is normal and often desirable for texture.</p>
+        <p><b>Water content</b> splits that finished weight into water and dry solids. Two batches can weigh the same and be very different products &mdash; this is the number that tells you which.</p>
+        <p>Log temperature, humidity, and duration every run. After a handful of batches you will see which conditions gave you the lowest unit waste, and you can set your overage from data instead of guessing.</p>
+      </div>
+
+      <div class="gsec">
+        <h3><span class="bar" style="background:var(--amber)"></span>Extract Buffer &amp; Overage</h3>
+        <p><b>Leave the extract buffer at 0.</b> It exists for one situation only: you sent a batch to a lab, the result came back under your target dose, and you want the next batch to compensate. Without a lab number there is nothing to base a figure on, so guessing here only makes your dose less predictable, not more. At 0 the tool doses your extract at face value using the THC percentage on your test results or your own notes.</p>
+        <p>If you do have a lab number, the math is simple: divide your target dose by what the lab actually measured. A batch aimed at 25 mg that tested at 22 mg means you retained 88%, so a 12% buffer brings the next run on target.</p>
+        <p><b>Overage</b> works on count instead of potency. Set 5% and it plans a 105-gummy batch so that after normal scrape and fill loss you still walk away with 100 sellable gummies.</p>
+      </div>
+
+      <div class="gsec">
+        <h3><span class="bar" style="background:var(--brand2)"></span>Gummy Selection</h3>
+        <p><b>Albanese</b> is the go-to: 5 lb bags sorted by single flavor, no picking through mixed assortments, cost-effective for consistent production. Pineapple + mango pairs beautifully with fruity extract flavors; red cherry is a bold standalone.</p>
+        <p>Albanese uses corn syrup as the primary ingredient. If cleaner labels matter, look at <b>German Haribo</b> for superior gelatin quality or <b>Melt To Make</b>, which is formulated specifically for infusion.</p>
+      </div>
+
+      <div class="gsec">
+        <h3><span class="bar" style="background:var(--slate)"></span>Equipment: The Overhead Mixer</h3>
+        <p>Homogenization separates amateur from professional. Without it you get hot spots &mdash; pockets of high cannabinoid concentration that make dosing unpredictable across the same batch.</p>
+        <p>The <b>LabFish overhead stirrer</b> gives precision RPM control in the critical 100&ndash;200 range and lets the mixture homogenize uninterrupted for 5&ndash;10 minutes, which is effectively impossible by hand.</p>
+      </div>
+    </div>
+    <div class="mod-ft"><button class="btn b-indigo" data-close="ovGuide">Close</button></div>
+  </div>
+</div>
+
+<!-- ============ 21+ AGE GATE ============ -->
+<div class="ov ov-age" id="ovAge" role="dialog" aria-modal="true" aria-labelledby="ageTitle">
+  <div class="mod">
+    <div class="mod-hd h-info">
+      <div class="mi"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+      <div><h2 id="ageTitle">Age verification</h2><p>This tool is for adults 21 and over</p></div>
+    </div>
+    <div class="mod-bd" id="ageAsk">
+      <p style="font-size:13px;color:var(--ink2);line-height:1.65">Are you 21 years of age or older? You must confirm before using GummyLogics.</p>
+      <div class="age-actions">
+        <button type="button" class="btn b-green lg" id="btnAgeYes">Yes, I am 21+</button>
+        <button type="button" class="btn b-slate lg" id="btnAgeNo">No</button>
+      </div>
+    </div>
+    <div class="mod-bd age-blocked" id="ageNo">
+      <h3>Access restricted</h3>
+      <p>You must be 21 or older to use this calculator.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ============ COOKIE CONSENT ============ -->
+<div class="ckbar no-print" id="ckBar" role="dialog" aria-labelledby="ckTitle" aria-describedby="ckCopy">
+  <h3 id="ckTitle">Cookies &amp; local storage</h3>
+  <p id="ckCopy">We store your age check and saved batches in this browser so the calculator works. Optional analytics only run if you allow them. You can change this anytime from Cookie settings in the footer.</p>
+  <div class="ckopt" id="ckOpt">
+    <label class="ck"><input type="checkbox" checked disabled> Necessary — age verification and saved batches on this device</label>
+    <label class="ck"><input type="checkbox" id="ckAnalytics"> Analytics — anonymous button events (Calculate, Export, Save) if a tracker is installed</label>
+  </div>
+  <div class="ckrow">
+    <button type="button" class="btn sm b-slate" id="btnCkCustom">Customize</button>
+    <span class="sp"></span>
+    <button type="button" class="btn sm b-slate" id="btnCkReject">Necessary only</button>
+    <button type="button" class="btn sm b-green" id="btnCkAccept">Accept all</button>
+  </div>
+</div>
+
+<script>
+(function(){
+"use strict";
+
+/* ================= analytics (usage tracking) =================
+   Fires a custom event to whichever analytics script is loaded in <head>
+   (Plausible: window.plausible, Umami: window.umami, GA4: window.gtag).
+   No-ops safely if none is installed, so this is safe to ship before
+   you've picked a provider. See the <head> comment block for setup. */
+function track(name, props){
+  if(!consentAllowsAnalytics()) return;
+  try{
+    if(window.plausible) window.plausible(name, {props: props||{}});
+    else if(window.umami && window.umami.track) window.umami.track(name, props||{});
+    else if(window.gtag) window.gtag("event", name, props||{});
+  }catch(e){}
+}
+
+/* ================= constants ================= */
+var GPU = { g:1, oz:28.349523125, lb:453.59237 };
+var DROP_G = 0.05;
+var SORB_PER_G = 250;
+var LS_KEY = "bm_gummy_v3_batches";
+var AGE_KEY = "gl_age_verified_21";
+var CONSENT_KEY = "gl_cookie_consent_v1";
+
+function readConsent(){
+  try{
+    var raw = localStorage.getItem(CONSENT_KEY);
+    if(!raw) return null;
+    var o = JSON.parse(raw);
+    return o && typeof o === "object" ? o : null;
+  }catch(e){ return null; }
+}
+function writeConsent(analytics){
+  var o = { v:1, necessary:true, analytics:!!analytics, when:new Date().toISOString() };
+  try{ localStorage.setItem(CONSENT_KEY, JSON.stringify(o)); }catch(e){}
+  return o;
+}
+function consentAllowsAnalytics(){
+  var o = readConsent();
+  return !!(o && o.analytics);
+}
+function showCookieBar(force){
+  var bar = $("ckBar"); if(!bar) return;
+  if(!force && readConsent()){ bar.classList.remove("on"); return; }
+  var box = $("ckAnalytics");
+  var cur = readConsent();
+  if(box) box.checked = !!(cur && cur.analytics);
+  $("ckOpt").classList.toggle("on", !!force && !!cur);
+  bar.classList.add("on");
+}
+function hideCookieBar(){
+  var bar = $("ckBar");
+  if(bar) bar.classList.remove("on");
+}
+function saveConsent(analytics){
+  writeConsent(analytics);
+  hideCookieBar();
+}
+function maybeShowCookies(){
+  if(!ageVerified()) return;
+  if(!readConsent()) showCookieBar(false);
+}
+
+function ageVerified(){
+  try{ return localStorage.getItem(AGE_KEY) === "1"; }catch(e){ return false; }
+}
+function openAgeGate(){
+  var ask = $("ageAsk"), no = $("ageNo");
+  if(ask) ask.style.display = "";
+  if(no) no.style.display = "none";
+  document.body.classList.add("age-locked");
+  openM("ovAge");
+}
+function closeAgeGate(){
+  document.body.classList.remove("age-locked");
+  $("ovAge").classList.remove("on");
+}
+function requireAge(next){
+  if(ageVerified()){ if(next) next(); return true; }
+  openAgeGate();
+  return false;
+}
+function ageYes(){
+  try{ localStorage.setItem(AGE_KEY, "1"); }catch(e){}
+  closeAgeGate();
+  maybeShowCookies();
+}
+function ageNo(){
+  try{ localStorage.removeItem(AGE_KEY); }catch(e){}
+  var ask = $("ageAsk"), no = $("ageNo");
+  if(ask) ask.style.display = "none";
+  if(no) no.style.display = "block";
+}
+
+var $ = function(id){ return document.getElementById(id); };
+
+function n(id){
+  var el = $(id); if(!el) return null;
+  var raw = String(el.value).trim();
+  if(raw === "") return null;
+  var v = Number(raw);
+  return isFinite(v) ? v : null;
+}
+function nz(id){ var v = n(id); return v === null ? 0 : v; }
+function sv(id){ var el=$(id); return el ? String(el.value).trim() : ""; }
+function ck(id){ var el=$(id); return !!(el && el.checked); }
+function money(v){ return (v<0?"-$":"$") + Math.abs(v).toFixed(2); }
+function money4(v){ return "$" + v.toFixed(4); }
+function g(v,dp){ if(dp===undefined) dp=2; return v.toFixed(dp) + " g"; }
+function isNum(v){ return typeof v === "number" && isFinite(v); }
+function setTxt(id,t){ var el=$(id); if(el) el.textContent = t; }
+function DASH(){ return "\u2014"; }
+function esc(s){ return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;"); }
+
+/* time-of-day helpers — <input type="time"> gives "HH:MM", n() cannot parse that */
+function timeDiffHours(startId, endId){
+  var s = sv(startId), e = sv(endId);
+  if(!s || !e) return null;
+  var sp = s.split(":"), ep = e.split(":");
+  if(sp.length < 2 || ep.length < 2) return null;
+  var sMin = Number(sp[0])*60 + Number(sp[1]);
+  var eMin = Number(ep[0])*60 + Number(ep[1]);
+  if(!isFinite(sMin) || !isFinite(eMin)) return null;
+  var diff = eMin - sMin;
+  if(diff < 0) diff += 24*60; /* overnight wrap */
+  return diff / 60;
+}
+/* prefer a manually-entered duration; otherwise derive it from start/finish clock times */
+function laborHours(startId, endId, manualId){
+  var manual = n(manualId);
+  if(manual !== null && manual > 0) return manual;
+  return timeDiffHours(startId, endId);
+}
+
+/* ================= tile registry ================= */
+/* grp: hidden group id | ic: badge label | col: badge color | sec: which grid */
+var TILES = [
+  {grp:"g_name", sec:1, ic:"\u270e", col:"var(--slate)",  name:"Batch Name",       opt:true,
+   sub:"Label this run for your records"},
+  {grp:"g_mode", sec:1, ic:"\u21c4", col:"var(--brand)",  name:"Solve Mode",
+   sub:"Pick what you are solving from"},
+  {grp:"g_core", sec:1, ic:"\u2699", col:"var(--green)",  name:"Recipe",
+   sub:"Mold size, target dose, extract potency"},
+  {grp:"g_adv",  sec:1, ic:"\u2261", col:"var(--blue)",   name:"Fine Tuning",      opt:true,
+   sub:"Extract buffer, lecithin ratio, overage"},
+
+  {grp:"g_ros",  sec:2, ic:"1", col:"var(--green)",  name:"THC Extract",   opt:true, sub:"Price rate for your extract"},
+  {grp:"g_gum",  sec:2, ic:"2", col:"var(--blue)",   name:"Raw Gummies",      opt:true, sub:"Price rate for gummy base"},
+  {grp:"g_pack", sec:2, ic:"3", col:"var(--purple)", name:"Packaging",        opt:true, sub:"Bags, jars, or tins"},
+  {grp:"g_lbl",  sec:2, ic:"4", col:"#7f56d9",       name:"Labels",           opt:true, sub:"Product labels per package"},
+  {grp:"g_mct",  sec:2, ic:"5", col:"var(--teal)",   name:"MCT Oil",          opt:true, sub:"Container price and amount used"},
+  {grp:"g_lec",  sec:2, ic:"6", col:"#5925dc",       name:"Liquid Lecithin",  opt:true, sub:"Container price and amount used"},
+  {grp:"g_sug",  sec:2, ic:"7", col:"var(--amber)",  name:"Sanding Sugar",    opt:true, sub:"Package price and amount used"},
+  {grp:"g_sorb", sec:2, ic:"8", col:"var(--red)",    name:"Potassium Sorbate",opt:true, sub:"Measured in drops of 0.05 g"},
+  {grp:"g_test", sec:2, ic:"9", col:"var(--blue)",   name:"Lab Testing",      opt:true, sub:"Flat testing fee for the batch"},
+  {grp:"g_misc", sec:2, ic:"10",col:"var(--slate)",  name:"Additional Costs", opt:true, sub:"Other line items you add yourself"},
+  {grp:"g_labor",sec:2, ic:"11",col:"var(--brand2)", name:"Labor & Time",      opt:true, sub:"Production and packaging time cost"},
+  {grp:"g_box",  sec:2, ic:"12",col:"var(--brand)",  name:"Boxes",            opt:true, sub:"Bulk box price, boxes used"},
+
+  {grp:"g_fin",  sec:3, ic:"\u2713", col:"var(--green)", name:"Finished Yield", opt:true,
+   sub:"Real count and weight after cure"},
+  {grp:"g_cure", sec:3, ic:"\u25d0", col:"var(--teal)",  name:"Cure Conditions",opt:true,
+   sub:"Duration, temperature, humidity"},
+  {grp:"g_moist",sec:3, ic:"\u2248", col:"var(--blue)",  name:"Moisture & Notes",opt:true,
+   sub:"Water content after cure"}
+];
+
+/* summary text + filled state per group */
+function unitOf(id){ var u=sv(id); return u==="g"?"g":(u==="oz"?"oz":"lb"); }
+
+var SUM = {
+  g_name: function(){ var v=sv("batchName"); return v ? {t:v,set:true} : {t:"Unnamed batch",set:false}; },
+  g_mode: function(){
+    if(mode==="count"){ var v=n("numGummies"); return {t: v!==null ? ("Target " + Math.floor(v) + " gummies") : "Target count \u2014 not set", set:v!==null}; }
+    if(mode==="gummy"){ var a=n("availGummy"); return {t: a!==null ? ("From " + a + " g gummy base") : "Gummy base \u2014 not set", set:a!==null}; }
+    var r=n("availRosin"); return {t: r!==null ? ("From " + r + " g extract") : "Extract \u2014 not set", set:r!==null};
+  },
+  g_core: function(){
+    var m=n("moldSize"), d=n("thcPerGummy"), p=n("rosinPct");
+    var ok = m!==null && d!==null && p!==null;
+    return {t: (m===null?"?":m) + " g \u00b7 " + (d===null?"?":d) + " mg \u00b7 " + (p===null?"?":p) + "% THC", set:ok};
+  },
+  g_adv: function(){
+    var e=n("lossPct"), l=n("lecRatio"), o=n("overage");
+    var touched = (e!==null && e!==0) || (l!==null && l!==0.232) || (o!==null && o!==0);
+    return {t: (e===null?0:e) + "% buffer \u00b7 " + (l===null?0:l) + "% lec \u00b7 " + (o===null?0:o) + "% over", set:touched};
+  },
+  g_ros: function(){ return rateSum("pRos","qRos","uRos","xRosC"); },
+  g_gum: function(){ return rateSum("pGum","qGum","uGum","xGumC"); },
+  g_pack: function(){
+    var p=n("pPack"), q=n("qPack"), pp=n("nPerPack");
+    if(p===null && q===null && pp===null) return {t:"Not entered",set:false};
+    var c=$("xPackC").textContent;
+    return {t: (c!==DASH()? c + " \u00b7 " : "") + (pp!==null? pp + " per pack" : "packs not set"), set:c!==DASH()};
+  },
+  g_lbl: function(){
+    var p=n("pLbl"), q=n("qLbl"), w=n("wLbl");
+    if(p===null && q===null && w===null) return {t:"Not entered",set:false};
+    var c=$("xLblC").textContent;
+    return {t: (c!==DASH()? c + " \u00b7 " : "") + (w!==null? Math.ceil(w) + " labels" : "count not set"), set:c!==DASH()};
+  },
+  g_test: function(){
+    var p=n("pTest"), q=n("qTest"), l=sv("lTest");
+    if(p===null && q===null && !l) return {t:"Not entered",set:false};
+    var c=$("xTestC").textContent;
+    return {t: (l? l + " \u00b7 " : "") + (c!==DASH()? c : "cost not set"), set:c!==DASH()};
+  },
+  g_mct: function(){ return useSum("pMct","wMct","xMctC"); },
+  g_lec: function(){ return useSum("pLec", "wLec","xLecC"); },
+  g_sug: function(){ return useSum("pSug","wSug","xSugC"); },
+  g_sorb:function(){ return useSum("pSorb", "wSorb","xSorbC"); },
+  g_misc:function(){
+    var i, counted = 0, tot = 0, touched = false;
+    if($("xMiscC").textContent !== DASH()){ counted++; tot += miscCost; }
+    if(sv("lMisc") || n("pMisc") !== null || n("qMisc") !== null || n("wMisc") !== null) touched = true;
+    for(i=0;i<XTRA.length;i++){
+      var b = $("xX"+XTRA[i]);
+      if(b && b.textContent !== DASH()){ counted++; tot += (xtraCost[XTRA[i]] || 0); }
+    }
+    if(XTRA.length) touched = true;
+    if(counted === 0) return {t: touched ? "Started \u00b7 no cost yet" : "Not entered", set:false};
+    return {t: counted + (counted===1?" line":" lines") + " \u00b7 " + money(tot), set:true};
+  },
+  g_labor: function(){
+    var rate=n("pLaborRate"), ph=laborHours("tProdStart","tProdEnd","dProdManual"), kh=laborHours("tPackStart","tPackEnd","dPackManual");
+    if(rate===null && ph===null && kh===null) return {t:"Not entered",set:false};
+    if(rate===null || (ph===null && kh===null)) return {t:"Started \u00b7 no cost yet",set:false};
+    var tot = (ph||0)*rate + (kh||0)*rate;
+    return {t: ((ph||0)+(kh||0)).toFixed(2) + " hrs \u00b7 " + money(tot), set:true};
+  },
+  g_box: function(){
+    var p=n("pBoxBulk"), q=n("qBoxBulk"), pp=n("nPacksPerBox");
+    if(p===null && q===null && pp===null) return {t:"Not entered",set:false};
+    var c=$("xBoxC").textContent;
+    return {t: (c!==DASH()? c + " \u00b7 " : "") + (pp!==null? pp + " packs/box" : "packs/box not set"), set:c!==DASH()};
+  },
+  g_fin: function(){
+    var a=n("actual"), m=n("actualMass");
+    if(a===null && m===null) return {t:"Not logged",set:false};
+    var parts=[]; if(a!==null) parts.push(Math.floor(a)+" gummies"); if(m!==null) parts.push(m+" g");
+    return {t:parts.join(" \u00b7 "),set:true};
+  },
+  g_cure: function(){
+    var d=n("curDur"), t=n("curTemp"), h=n("curRH");
+    if(d===null && t===null && h===null) return {t:"Not logged",set:false};
+    var parts=[];
+    if(d!==null) parts.push(d + (sv("curUnit")==="h"?"h":"d"));
+    if(t!==null) parts.push(t + "\u00b0" + sv("curTempU"));
+    if(h!==null) parts.push(h + "% RH");
+    return {t:parts.join(" \u00b7 "),set:true};
+  },
+  g_moist:function(){
+    var w=n("wcPct"), nt=sv("curNote");
+    if(w===null && !nt) return {t:"Not logged",set:false};
+    var parts=[]; if(w!==null) parts.push(w+"% water"); if(nt) parts.push(nt);
+    return {t:parts.join(" \u00b7 "),set:true};
+  }
+};
+function rateSum(pId,qId,uId,cId){
+  var p=n(pId);
+  if(p===null) return {t:"Not entered",set:false};
+  var c=$(cId).textContent;
+  return {t: money(p) + " / " + (n(qId)===null?"?":n(qId)) + " " + unitOf(uId) + (c!==DASH()? "  \u2192  " + c : ""), set:c!==DASH()};
+}
+function useSum(pId,wId,cId){
+  var p=n(pId);
+  if(p===null) return {t:"Not entered",set:false};
+  var c=$(cId).textContent;
+  if(c!==DASH()) return {t: money(p) + " paid  \u2192  " + c, set:true};
+  return {t: money(p) + " paid \u00b7 amount used not set", set:false};
+}
+
+/* build tile grids */
+function buildTiles(){
+  var grids = {1:$("tiles1"), 2:$("tiles2"), 3:$("tiles3")};
+  var html = {1:"",2:"",3:""};
+  for(var i=0;i<TILES.length;i++){
+    var t = TILES[i];
+    html[t.sec] += '<button class="tile' + (t.opt?" opt":"") + '" data-grp="' + t.grp + '">'
+      + '<span class="ic" style="background:' + t.col + '">' + t.ic + '</span>'
+      + '<span class="tx"><span class="n">' + esc(t.name) + '</span><span class="v" id="tv_' + t.grp + '">&mdash;</span></span>'
+      + '<span class="dot" id="td_' + t.grp + '"></span></button>';
+  }
+  grids[1].innerHTML = html[1]; grids[2].innerHTML = html[2]; grids[3].innerHTML = html[3];
+}
+function refreshTiles(){
+  for(var i=0;i<TILES.length;i++){
+    var t = TILES[i], f = SUM[t.grp];
+    if(!f) continue;
+    var s = f();
+    var v = $("tv_" + t.grp), d = $("td_" + t.grp);
+    if(v){ v.textContent = s.t; v.className = "v" + (s.set ? " set" : ""); }
+    if(d){ d.className = "dot" + (s.set ? " set" : ""); }
+  }
+}
+
+/* ================= panel open/close ================= */
+var openGrp = null;
+function openPanel(grpId){
+  var t = null;
+  for(var i=0;i<TILES.length;i++) if(TILES[i].grp === grpId) t = TILES[i];
+  if(!t) return;
+  /* never destroy a group that is still sitting in the panel: move it home first */
+  var body = $("panBody");
+  while(body.firstChild){
+    var stray = body.firstChild;
+    if(stray.nodeType === 1 && stray.className === "grp"){ stray.style.display = ""; $("grpHolder").appendChild(stray); }
+    else body.removeChild(stray);
+  }
+  openGrp = grpId;
+  setTxt("panTitle", t.name);
+  setTxt("panSub", t.sub || "\u00a0");
+  $("panIc").innerHTML = '<span style="font-size:15px;font-weight:850">' + t.ic + '</span>';
+  body.appendChild($(grpId));
+  $(grpId).style.display = "grid";
+  $("ovPanel").classList.add("on");
+  render();
+  var first = body.querySelector("input:not([disabled]),select:not([disabled])");
+  if(first) setTimeout(function(){ try{ first.focus(); first.select && first.select(); }catch(e){} }, 60);
+}
+function closePanel(){
+  if(openGrp){
+    var grp = $(openGrp);
+    if(grp){ grp.style.display = ""; $("grpHolder").appendChild(grp); }
+    openGrp = null;
+  }
+  $("ovPanel").classList.remove("on");
+  render();
+}
+/* ---- user-added cost lines ---- */
+var XTRA = [], XTRA_SEQ = 0, xtraCost = {}, miscCost = 0;
+var XTRA_HTML = ''
+ + '<div class="xhd"><span class="xn" id="xn_@">Extra line</span>'
+ + '<button type="button" class="btn sm b-red xdel" data-xdel="@">Remove</button></div>'
+ + '<div class="row2">'
+ + '<div class="f"><label for="xL@">Item Description</label><input type="text" id="xL@" placeholder="e.g. labor, delivery, license fee"></div>'
+ + '<div class="f"><label for="xT@">How It Is Priced</label><select id="xT@">'
+ + '<option value="flat">Flat cost for this batch</option><option value="wt">Priced by weight</option></select></div>'
+ + '</div>'
+ + '<div class="f xflat" id="xF@"><label for="xC@">Cost for This Batch ($)</label>'
+ + '<input type="number" id="xC@" placeholder="0.00" min="0" step="0.01"></div>'
+ + '<div class="xwt" id="xW@" style="display:none">'
+ + '<div class="row3">'
+ + '<div class="f"><label for="xP@">Total Price Paid ($)</label><input type="number" id="xP@" placeholder="0.00" min="0" step="0.01"></div>'
+ + '<div class="f"><label for="xQ@">Package Size</label><input type="number" id="xQ@" placeholder="0" min="0" step="0.01"></div>'
+ + '<div class="f"><label for="xU@">Unit</label><select id="xU@"><option value="g" selected>gram</option><option value="oz">ounce</option><option value="lb">pound</option></select></div>'
+ + '</div>'
+ + '<div class="f"><label for="xA@">Used in Batch</label><div class="pair"><input type="number" id="xA@" placeholder="0" min="0" step="0.01">'
+ + '<select id="xV@"><option value="g" selected>gram</option><option value="oz">ounce</option><option value="lb">pound</option></select></div></div>'
+ + '</div>'
+ + '<div class="gout"><span class="pill hero">Batch cost <b id="xX@">&mdash;</b></span>'
+ + '<span class="pill warn xwarn" id="xN@" style="display:none">Add a cost to include this line</span></div>';
+
+function xtraRow(){
+  XTRA_SEQ++;
+  var i = XTRA_SEQ;
+  XTRA.push(i);
+  var d = document.createElement("div");
+  d.className = "xline";
+  d.id = "xl_" + i;
+  d.innerHTML = XTRA_HTML.replace(/@/g, String(i));
+  $("xtraWrap").appendChild(d);
+  buildFieldMap();
+  xtraRenumber();
+  return i;
+}
+function xtraRenumber(){
+  for(var k=0;k<XTRA.length;k++){
+    var t = $("xn_" + XTRA[k]);
+    if(t) t.textContent = "Extra line " + (k+1);
+  }
+}
+function xtraDel(i, quiet){
+  var el = $("xl_" + i);
+  if(el && el.parentNode) el.parentNode.removeChild(el);
+  for(var k=0;k<XTRA.length;k++){ if(XTRA[k]===i){ XTRA.splice(k,1); break; } }
+  delete xtraCost[i];
+  xtraRenumber();
+  if(!quiet) render();
+}
+function xtraSet(cnt){
+  while(XTRA.length) xtraDel(XTRA[0], true);
+  for(var k=0;k<cnt;k++) xtraRow();
+}
+function xtraAdd(){
+  var i = xtraRow();
+  render();
+  var el = $("xL" + i);
+  if(el && el.focus) el.focus();
+}
+
+function clearGroup(grpId){
+  var grp = $(grpId); if(!grp) return;
+  var els = grp.querySelectorAll("input,select");
+  for(var i=0;i<els.length;i++){
+    var e = els[i];
+    if(e.type === "checkbox"){ e.checked = (e.id === "aLec" || e.id === "aSorb" || e.id === "aLbl"); }
+    else if(e.tagName === "SELECT"){ e.selectedIndex = defaultSel[e.id] || 0; }
+    else if(e.type === "radio"){ /* leave mode alone */ }
+    else { e.value = defaultVal.hasOwnProperty(e.id) ? defaultVal[e.id] : ""; }
+    e.classList.remove("bad");
+  }
+  render();
+}
+
+/* ================= mode ================= */
+var mode = "count";
+function setMode(m){
+  mode = m;
+  var i, labels = document.querySelectorAll(".mode");
+  for(i=0;i<labels.length;i++){
+    var on = labels[i].getAttribute("data-mode") === m;
+    labels[i].classList.toggle("on", on);
+    labels[i].querySelector("input").checked = on;
+  }
+  var drv = document.querySelectorAll(".drv");
+  for(i=0;i<drv.length;i++) drv[i].style.display = (drv[i].getAttribute("data-drv") === m) ? "" : "none";
+  render();
+}
+
+/* ================= recipe math ================= */
+function recipe(){
+  var m  = n("moldSize");
+  var d  = n("thcPerGummy");
+  var p  = n("rosinPct");
+  var e  = effPct();
+  var Lr = n("lecRatio");   if(Lr===null) Lr = 0;
+  var ov = n("overage");    if(ov===null) ov = 0;
+
+  var r = { ok:false, m:m, d:d, p:p, e:e, Lr:Lr, ov:ov };
+  if(!isNum(m) || !isNum(d) || !isNum(p) || m<=0 || d<=0 || p<=0 || e<=0) return r;
+
+  var mgPerG = p * 10 * (e/100);
+  if(!(mgPerG > 0)) return r;
+
+  var rpg = d / mgPerG;
+  var k   = m - rpg;
+  var lrf = Lr/100;
+  var ovf = 1 + ov/100;
+
+  r.rpg = rpg; r.k = k; r.lrf = lrf; r.ovf = ovf; r.mgPerG = mgPerG;
+  if(!(k > 0)) return r;
+
+  var target = null, plan = null, avail = null, leftover = null, leftoverKind = "";
+
+  if(mode === "count"){
+    target = n("numGummies");
+    if(!isNum(target) || target < 1) return r;
+    target = Math.floor(target);
+    plan = Math.ceil(target * ovf);
+  } else if(mode === "gummy"){
+    avail = n("availGummy");
+    if(!isNum(avail) || avail <= 0) return r;
+    var per = k * (1 - lrf);
+    if(!(per > 0)) return r;
+    plan = Math.floor(avail / per);
+    if(plan < 1){ r.tooSmall = "gummy"; return r; }
+    target = Math.floor(plan / ovf);
+    leftover = avail - plan * per; leftoverKind = "gummy base";
+  } else {
+    avail = n("availRosin");
+    if(!isNum(avail) || avail <= 0) return r;
+    plan = Math.floor(avail / rpg);
+    if(plan < 1){ r.tooSmall = "rosin"; return r; }
+    target = Math.floor(plan / ovf);
+    leftover = avail - plan * rpg; leftoverKind = "extract";
+  }
+
+  r.target = target; r.plan = plan; r.avail = avail;
+  r.leftover = leftover; r.leftoverKind = leftoverKind;
+  r.B  = plan * m;
+  r.R  = plan * rpg;
+  r.Lg = plan * k * lrf;
+  r.G  = plan * k * (1 - lrf);
+  r.drops = Math.ceil(r.B / SORB_PER_G);
+  r.sorbG = r.drops * DROP_G;
+  r.thcTotal = plan * d;
+  r.load = r.B > 0 ? (r.R / r.B) * 100 : 0;
+  r.ok = true;
+  return r;
+}
+
+/* ================= cure / waste math ================= */
+function cure(r){
+  var o = {};
+  var fin = n("actual"), mass = n("actualMass"), wc = n("wcPct");
+  var plan = r.ok ? r.plan : null;
+  o.plan = plan;
+  o.fin = (isNum(fin) && fin >= 0) ? Math.floor(fin) : null;
+  o.mass = (isNum(mass) && mass > 0) ? mass : null;
+  o.wc = (isNum(wc) && wc >= 0) ? wc : null;
+
+  if(o.fin !== null && isNum(plan) && plan > 0){
+    o.unitLoss  = plan - o.fin;
+    o.unitWaste = (o.unitLoss / plan) * 100;
+    o.yieldPct  = (o.fin / plan) * 100;
+  }
+  if(o.mass !== null && r.ok && r.B > 0){
+    o.massLoss  = r.B - o.mass;
+    o.massWaste = (o.massLoss / r.B) * 100;
+  }
+  if(o.wc !== null && o.mass !== null){
+    o.water  = o.mass * o.wc / 100;
+    o.solids = o.mass - o.water;
+  }
+  if(o.fin && o.mass !== null) o.perGummy = o.mass / o.fin;
+
+  o.dur = n("curDur"); o.durU = sv("curUnit") === "h" ? "hours" : "days";
+  o.temp = n("curTemp"); o.tempU = sv("curTempU");
+  o.rh = n("curRH");
+  o.note = sv("curNote");
+  o.any = (o.fin !== null || o.mass !== null || o.wc !== null || o.dur !== null || o.temp !== null || o.rh !== null || !!o.note);
+  return o;
+}
+
+/* The user enters a rosin buffer (0 = none). Internally the math still runs on
+   an efficiency figure, so convert once here: 10% buffer -> 90% efficiency. */
+function lossPct(){ var l = n("lossPct"); if(l === null || l < 0) l = 0; return l; }
+function effPct(){ return 100 - lossPct(); }
+
+/* ================= auto-filled fields =================
+   When the auto checkbox is on we write the calculated number straight into
+   the input box (read-only, tinted) instead of leaving it blank. Unchecking
+   unlocks the field and keeps the number so it can be adjusted by hand. */
+function autoField(inputId, unitId, on, val){
+  var el = $(inputId);
+  if(!el) return;
+  var u = unitId ? $(unitId) : null;
+  if(on){
+    el.classList.add("auto");
+    el.readOnly = true;
+    el.disabled = false;
+    if(el.value !== val) el.value = val;
+    if(u){ if(u.value !== "g") u.value = "g"; u.disabled = true; u.classList.add("auto"); }
+  } else if(el.classList.contains("auto")){
+    el.classList.remove("auto");
+    el.readOnly = false;
+    el.disabled = false;
+    if(u){ u.disabled = false; u.classList.remove("auto"); }
+  }
+}
+
+/* ================= cost math ================= */
+function perGram(price, qty, unit){
+  if(!isNum(price) || !isNum(qty) || price <= 0 || qty <= 0) return null;
+  var grams = qty * (GPU[unit] || 1);
+  if(!(grams > 0)) return null;
+  return price / grams;
+}
+function toG(amt, unit){ return (isNum(amt) ? amt : 0) * (GPU[unit] || 1); }
+
+var LINE_COL = ["#047857","#175cd3","#5925dc","#0e7090","#b54708","#b42318","#5c6670","#7f56d9","#0f766e"];
+
+function costs(r, cu){
+  var lines = [], total = 0;
+  function add(label, qtyTxt, unitTxt, cost){
+    lines.push({ label:label, qty:qtyTxt, unit:unitTxt, cost:cost, col:LINE_COL[lines.length % LINE_COL.length] });
+    total += cost;
+  }
+
+  var rosPG = perGram(n("pRos"), n("qRos"), sv("uRos"));
+  var rosQ  = r.ok ? r.R : null;
+  var rosC  = (rosPG !== null && isNum(rosQ)) ? rosPG * rosQ : null;
+  setTxt("xRosG", rosPG !== null ? money4(rosPG) : DASH());
+  setTxt("xRosQ", isNum(rosQ) ? g(rosQ,3) : DASH());
+  setTxt("xRosC", rosC !== null ? money(rosC) : DASH());
+  if(rosC !== null) add("THC extract", g(rosQ,3), money4(rosPG)+"/g", rosC);
+
+  var gumPG = perGram(n("pGum"), n("qGum"), sv("uGum"));
+  var gumQ  = r.ok ? r.G : null;
+  var gumC  = (gumPG !== null && isNum(gumQ)) ? gumPG * gumQ : null;
+  setTxt("xGumG", gumPG !== null ? money4(gumPG) : DASH());
+  setTxt("xGumQ", isNum(gumQ) ? g(gumQ,2) : DASH());
+  setTxt("xGumC", gumC !== null ? money(gumC) : DASH());
+  if(gumC !== null) add("Raw gummy base", g(gumQ,2), money4(gumPG)+"/g", gumC);
+  /* leftover in the bag that this batch does not use — already paid for, just not consumed yet */
+  var gumLeftG = null, gumLeftC = null;
+  if(r.ok && mode !== "count" && r.leftoverKind === "gummy base" && isNum(r.leftover)) gumLeftG = r.leftover;
+  else if(gumPG !== null && isNum(n("qGum"))){
+    var bagG = toG(n("qGum"), sv("uGum"));
+    if(isNum(gumQ) && bagG > gumQ) gumLeftG = bagG - gumQ;
+  }
+  gumLeftC = (gumLeftG !== null && gumPG !== null) ? gumLeftG * gumPG : null;
+  var gumLeftWrap = $("xGumLeftWrap");
+  if(gumLeftG !== null && gumLeftG > 0.0005){
+    setTxt("xGumLeft", g(gumLeftG,2) + " (" + money(gumLeftC) + ")");
+    if(gumLeftWrap) gumLeftWrap.style.display = "";
+  } else if(gumLeftWrap) gumLeftWrap.style.display = "none";
+
+  var usedCount = (cu.fin !== null && cu.fin > 0) ? cu.fin : (r.ok ? r.plan : null);
+
+  var packPrice = n("pPack"), packPieces = n("qPack"), perPack = n("nPerPack");
+  var packPP = (isNum(packPrice) && isNum(packPieces) && packPrice > 0 && packPieces > 0) ? packPrice/packPieces : null;
+  var packN = (isNum(perPack) && perPack > 0 && isNum(usedCount)) ? Math.ceil(usedCount/perPack) : null;
+  var packC = (packPP !== null && packN !== null) ? packPP * packN : null;
+  setTxt("xPackP", packPP !== null ? money(packPP) : DASH());
+  setTxt("xPackN", packN !== null ? String(packN) + (packN===1?" piece":" pieces") : DASH());
+  setTxt("xPackC", packC !== null ? money(packC) : DASH());
+  if(packC !== null) add("Packaging", String(packN)+" pc", money(packPP)+"/pc", packC);
+
+  var lblAuto = ck("aLbl");
+  setTxt("aLblV", packN !== null ? (packN + (packN===1?" label":" labels")) : "enter packaging first");
+  autoField("wLbl", null, lblAuto, packN !== null ? String(packN) : "");
+  var lblPrice = n("pLbl"), lblQty = n("qLbl"), lblUsed = n("wLbl");
+  var lblPP = (isNum(lblPrice) && isNum(lblQty) && lblPrice > 0 && lblQty > 0) ? lblPrice/lblQty : null;
+  var lblN  = (isNum(lblUsed) && lblUsed > 0) ? Math.ceil(lblUsed) : null;
+  var lblC  = (lblPP !== null && lblN !== null) ? lblPP * lblN : null;
+  setTxt("xLblP", lblPP !== null ? money4(lblPP) : DASH());
+  setTxt("xLblN", lblN !== null ? (lblN + (lblN===1?" label":" labels")) : DASH());
+  setTxt("xLblC", lblC !== null ? money(lblC) : DASH());
+  if(lblC !== null) add("Labels", lblN + (lblN===1?" label":" labels"), money4(lblPP)+"/label", lblC);
+
+  function consumable(cfg){
+    var pg = perGram(n(cfg.p), n(cfg.q), sv(cfg.u));
+    var usedG = toG(n(cfg.w), sv(cfg.v));
+    if(!isNum(usedG) || usedG <= 0) usedG = null;
+    var c = (pg !== null && usedG !== null) ? pg * usedG : null;
+    setTxt(cfg.xg, pg !== null ? money4(pg) : DASH());
+    setTxt(cfg.xq, usedG !== null ? g(usedG,3) : DASH());
+    setTxt(cfg.xc, c !== null ? money(c) : DASH());
+    return { pg:pg, usedG:usedG, cost:c };
+  }
+
+  var mct = consumable({p:"pMct",q:"qMct",u:"uMct",w:"wMct",v:"vMct",xg:"xMctG",xq:"xMctQ",xc:"xMctC"});
+  if(mct.cost !== null) add("MCT oil", g(mct.usedG,3), money4(mct.pg)+"/g", mct.cost);
+
+  var lecAuto = ck("aLec");
+  setTxt("aLecV", r.ok ? g(r.Lg,3) : DASH());
+  autoField("wLec", "vLec", lecAuto, r.ok ? r.Lg.toFixed(3) : "");
+  var lec = consumable({p:"pLec",q:"qLec",u:"uLec",w:"wLec",v:"vLec",xg:"xLecG",xq:"xLecQ",xc:"xLecC"});
+  if(lec.cost !== null) add("Liquid lecithin", g(lec.usedG,3), money4(lec.pg)+"/g", lec.cost);
+
+  var sug = consumable({p:"pSug",q:"qSug",u:"uSug",w:"wSug",v:"vSug",xg:"xSugG",xq:"xSugQ",xc:"xSugC"});
+  if(sug.cost !== null) add("Sanding sugar", g(sug.usedG,2), money4(sug.pg)+"/g", sug.cost);
+
+  var sorbAuto = ck("aSorb");
+  setTxt("aSorbV", r.ok ? (r.drops + (r.drops===1?" drop":" drops")) : DASH());
+  autoField("wSorb", null, sorbAuto, r.ok ? String(r.drops) : "");
+  var sorbDrops = n("wSorb");
+  var sorbPG = perGram(n("pSorb"), n("qSorb"), sv("uSorb"));
+  var sorbG = (isNum(sorbDrops) && sorbDrops > 0) ? sorbDrops * DROP_G : null;
+  var sorbC = (sorbPG !== null && sorbG !== null) ? sorbPG * sorbG : null;
+  setTxt("xSorbG", sorbPG !== null ? money4(sorbPG) : DASH());
+  setTxt("xSorbD", sorbPG !== null ? money4(sorbPG * DROP_G) : DASH());
+  setTxt("xSorbQ", isNum(sorbDrops) ? (sorbDrops + " drops / " + g(sorbG,3)) : DASH());
+  setTxt("xSorbC", sorbC !== null ? money(sorbC) : DASH());
+  if(sorbC !== null) add("Potassium sorbate", sorbDrops+" drops", money4(sorbPG*DROP_G)+"/drop", sorbC);
+
+  var mLabel = sv("lMisc");
+  var mPG = perGram(n("pMisc"), n("qMisc"), sv("uMisc"));
+  var mUsed = toG(n("wMisc"), sv("vMisc"));
+  if(!isNum(mUsed) || mUsed <= 0) mUsed = null;
+  var miscComplete = (mLabel !== "" && mPG !== null && mUsed !== null);
+  var miscC = miscComplete ? mPG * mUsed : null;
+  setTxt("xMiscG", mPG !== null ? money4(mPG) : DASH());
+  setTxt("xMiscQ", mUsed !== null ? g(mUsed,3) : DASH());
+  setTxt("xMiscC", miscC !== null ? money(miscC) : DASH());
+  var anyMisc = (mLabel !== "" || n("pMisc") !== null || n("qMisc") !== null || n("wMisc") !== null);
+  if($("xMiscNote")) $("xMiscNote").style.display = (anyMisc && !miscComplete) ? "" : "none";
+  miscCost = miscC || 0;
+  if(miscC !== null) add(mLabel, g(mUsed,3), money4(mPG)+"/g", miscC);
+
+  var testPrice = n("pTest"), testQty = n("qTest");
+  var tests = (isNum(testQty) && testQty > 0) ? Math.ceil(testQty)
+            : ((isNum(testPrice) && testPrice > 0) ? 1 : null);
+  var testC = (isNum(testPrice) && testPrice > 0 && tests !== null) ? testPrice * tests : null;
+  setTxt("xTestN", tests !== null ? (tests + (tests===1?" test":" tests")) : DASH());
+  setTxt("xTestG", (testC !== null && isNum(usedCount) && usedCount > 0) ? money4(testC/usedCount) : DASH());
+  setTxt("xTestC", testC !== null ? money(testC) : DASH());
+  if(testC !== null) add(sv("lTest") || "Lab testing", tests + (tests===1?" test":" tests"), money(testPrice)+"/test", testC);
+
+  /* user-added lines */
+  var xIncomplete = 0;
+  for(var xi=0; xi<XTRA.length; xi++){
+    var xid = XTRA[xi];
+    if(!$("xL"+xid)) continue;
+    var xType = sv("xT"+xid) || "flat";
+    var flatBox = $("xF"+xid), wtBox = $("xW"+xid);
+    if(flatBox) flatBox.style.display = (xType === "wt") ? "none" : "";
+    if(wtBox)   wtBox.style.display   = (xType === "wt") ? "" : "none";
+    var xLab = sv("xL"+xid);
+    var xc = null, xq = "", xu = "", touched = (xLab !== "");
+    if(xType === "wt"){
+      var xpg = perGram(n("xP"+xid), n("xQ"+xid), sv("xU"+xid));
+      var xug = toG(n("xA"+xid), sv("xV"+xid));
+      if(!isNum(xug) || xug <= 0) xug = null;
+      if(n("xP"+xid) !== null || n("xQ"+xid) !== null || n("xA"+xid) !== null) touched = true;
+      if(xpg !== null && xug !== null){ xc = xpg * xug; xq = g(xug,3); xu = money4(xpg)+"/g"; }
+    } else {
+      var xf = n("xC"+xid);
+      if(xf !== null) touched = true;
+      if(isNum(xf) && xf > 0){ xc = xf; xq = "1 batch"; xu = "flat fee"; }
+    }
+    xtraCost[xid] = xc || 0;
+    setTxt("xX"+xid, xc !== null ? money(xc) : DASH());
+    var note = $("xN"+xid);
+    if(note) note.style.display = (touched && xc === null) ? "" : "none";
+    if(touched && xc === null) xIncomplete++;
+    if(xc !== null) add(xLab || ("Additional cost " + (xi+1)), xq, xu, xc);
+  }
+
+  /* production + packaging labor — hours from either a manual entry or clock start/finish times */
+  var laborRate = n("pLaborRate");
+  var prodHrs = laborHours("tProdStart","tProdEnd","dProdManual");
+  var packHrs = laborHours("tPackStart","tPackEnd","dPackManual");
+  var prodLaborC = (laborRate !== null && laborRate > 0 && prodHrs !== null && prodHrs > 0) ? laborRate * prodHrs : null;
+  var packLaborC = (laborRate !== null && laborRate > 0 && packHrs !== null && packHrs > 0) ? laborRate * packHrs : null;
+  setTxt("xProdHrs", prodHrs !== null ? prodHrs.toFixed(2) + " hr" : DASH());
+  setTxt("xProdC", prodLaborC !== null ? money(prodLaborC) : DASH());
+  setTxt("xPackHrs", packHrs !== null ? packHrs.toFixed(2) + " hr" : DASH());
+  setTxt("xPackLaborC", packLaborC !== null ? money(packLaborC) : DASH());
+  if(prodLaborC !== null) add("Production labor", prodHrs.toFixed(2)+" hr", money(laborRate)+"/hr", prodLaborC);
+  if(packLaborC !== null) add("Packaging labor (fill & label)", packHrs.toFixed(2)+" hr", money(laborRate)+"/hr", packLaborC);
+
+  /* bulk boxes/cases used to hold the finished packs from this batch */
+  var boxBulkPrice = n("pBoxBulk"), boxBulkQty = n("qBoxBulk"), packsPerBox = n("nPacksPerBox");
+  var boxPP = (isNum(boxBulkPrice) && isNum(boxBulkQty) && boxBulkPrice > 0 && boxBulkQty > 0) ? boxBulkPrice/boxBulkQty : null;
+  var boxN  = (isNum(packsPerBox) && packsPerBox > 0 && isNum(packN)) ? Math.ceil(packN/packsPerBox) : null;
+  var boxC  = (boxPP !== null && boxN !== null) ? boxPP * boxN : null;
+  setTxt("xBoxP", boxPP !== null ? money(boxPP) : DASH());
+  setTxt("xBoxN", boxN !== null ? String(boxN) + (boxN===1?" box":" boxes") : DASH());
+  setTxt("xBoxC", boxC !== null ? money(boxC) : DASH());
+  if(boxC !== null) add("Boxes", String(boxN)+(boxN===1?" box":" boxes"), money(boxPP)+"/box", boxC);
+
+  return {
+    lines: lines, total: total, usedCount: usedCount,
+    perPack: (isNum(perPack) && perPack>0) ? perPack : null, packN: packN,
+    labelsN: lblN, tests: tests, testCost: testC, xIncomplete: xIncomplete,
+    prodHrs: prodHrs, packHrs: packHrs, laborRate: laborRate,
+    prodLaborC: prodLaborC, packLaborC: packLaborC,
+    boxN: boxN, boxCost: boxC,
+    gumLeftG: gumLeftG, gumLeftC: gumLeftC
+  };
+}
+
+/* ================= validation ================= */
+function validate(r, c, cu){
+  var errs = [], warns = [], badIds = [];
+  function E(t,d,f){ errs.push({t:t,d:d,f:f}); }
+  function W(t,d,f){ warns.push({t:t,d:d,f:f}); }
+  function bad(id){ badIds.push(id); }
+
+  if(n("moldSize") === null || n("moldSize") <= 0){ bad("moldSize"); E("Mold size is missing","Enter the weight of one finished gummy in grams.","Typical molds are 3\u20134 g per cavity."); }
+  if(n("thcPerGummy") === null || n("thcPerGummy") <= 0){ bad("thcPerGummy"); E("Target THC is missing","Enter how many milligrams of THC each gummy should contain."); }
+  if(n("rosinPct") === null || n("rosinPct") <= 0){ bad("rosinPct"); E("Extract THC percentage is missing","Without it there is no way to know how much extract carries your target dose.","Check your COA \u2014 total THC percentage."); }
+  else if(n("rosinPct") > 100){ bad("rosinPct"); E("Extract THC percentage is above 100%","A material cannot be more than 100% THC by mass.","Re-read your COA \u2014 you may be looking at a different figure."); }
+
+  var lp = n("lossPct");
+  if(lp !== null && (lp < 0 || lp > 95)){ bad("lossPct"); E("Extract buffer must be between 0% and 95%","The buffer is extra extract added on top of the dose. Above 95% the numbers run away from you.","Leave it at 0 unless a lab result told you to raise it."); }
+  else if(lp !== null && lp > 30){ W("That is a very large extract buffer","A " + lp + "% buffer adds roughly " + (100/(100-lp)*100-100).toFixed(0) + "% more extract than the dose calls for, so finished gummies could test well over your target.","Most makers leave this at 0 and adjust only after a lab result."); }
+  var lr = n("lecRatio");
+  if(lr !== null && (lr < 0 || lr > 20)){ bad("lecRatio"); E("Lecithin ratio is out of range","Enter a percentage between 0 and 20.","The original beta used 0.232%."); }
+  var ov = n("overage");
+  if(ov !== null && (ov < 0 || ov > 100)){ bad("overage"); E("Overage must be between 0% and 100%","Overage is extra batch volume to cover process loss."); }
+
+  if(mode === "count"){
+    var ng = n("numGummies");
+    if(ng === null || ng < 1){ bad("numGummies"); E("Number of gummies is missing","Enter how many finished gummies you want from this batch."); }
+  } else if(mode === "gummy"){
+    var ag = n("availGummy");
+    if(ag === null || ag <= 0){ bad("availGummy"); E("Gummy base amount is missing","You picked \u201Climited by gummy base\u201D, so enter the grams of raw gummies you have."); }
+    else if(r.tooSmall === "gummy"){ bad("availGummy"); E("Not enough gummy base for a single gummy",
+      "With a " + n("moldSize") + " g mold you cannot make even one gummy from " + ag + " g of base.","Add more gummy base or reduce the mold size."); }
+  } else {
+    var ar = n("availRosin");
+    if(ar === null || ar <= 0){ bad("availRosin"); E("Extract amount is missing","You picked \u201Climited by extract on hand\u201D, so enter the grams of extract you have."); }
+    else if(r.tooSmall === "rosin"){ bad("availRosin"); E("Not enough extract for a single gummy",
+      "At " + n("thcPerGummy") + " mg per gummy you need " + (isNum(r.rpg)?r.rpg.toFixed(4):"?") + " g of extract per gummy, more than the " + ar + " g you have.",
+      "Lower the target THC per gummy or add more extract."); }
+  }
+
+  if(isNum(r.k) && r.k <= 0 && isNum(r.rpg)){
+    bad("moldSize"); bad("thcPerGummy");
+    E("Impossible recipe: extract alone exceeds the gummy weight",
+      "Hitting " + n("thcPerGummy") + " mg at " + n("rosinPct") + "% THC needs " + r.rpg.toFixed(3) + " g of extract per gummy, but your mold only holds " + n("moldSize") + " g. There is no room for gummy base.",
+      "Raise the mold size, lower the target THC, or use higher-potency extract.");
+  } else if(r.ok && r.load > 25){
+    W("Extract load is very high (" + r.load.toFixed(1) + "% of batch mass)",
+      "Above roughly 25% extract by weight the mixture usually will not set into a workable gummy.",
+      "Consider a lower dose per gummy or a larger mold.");
+  }
+
+  /* used vs purchased (containers only, not price rates) */
+  function overuse(label, priceId, qtyId, unitId, usedG, fixHint){
+    var q = n(qtyId), p = n(priceId);
+    if(q === null || q <= 0) return;
+    if(!isNum(usedG) || usedG <= 0) return;
+    var haveG = q * (GPU[sv(unitId)] || 1);
+    if(usedG > haveG + 1e-9){
+      bad(qtyId);
+      E(label + ": using more than you bought",
+        "This batch consumes " + usedG.toFixed(3) + " g but the container you entered only holds " + haveG.toFixed(3) + " g.",
+        fixHint || "Increase the container size or reduce the amount used.");
+    }
+  }
+  var lblQ = n("qLbl"), lblW = n("wLbl");
+  if(isNum(lblQ) && lblQ > 0 && isNum(lblW) && lblW > lblQ + 1e-9){
+    bad("qLbl");
+    E("Labels: using more than you bought",
+      "This batch needs " + Math.ceil(lblW) + " labels but you only entered " + Math.floor(lblQ) + " received.",
+      "Increase the labels received, or lower the labels used in batch.");
+  }
+  if(n("pTest") !== null && n("pTest") < 0){ bad("pTest"); E("Lab testing cost cannot be negative","Enter the price of one test, or leave it blank."); }
+  for(var xv=0; xv<XTRA.length; xv++){
+    var xvid = XTRA[xv];
+    if(sv("xT"+xvid) === "wt"){
+      overuse("Extra line " + (xv+1) + (sv("xL"+xvid) ? " (" + sv("xL"+xvid) + ")" : ""),
+              "xP"+xvid, "xQ"+xvid, "xU"+xvid, toG(n("xA"+xvid), sv("xV"+xvid)));
+    }
+  }
+  if(c && c.xIncomplete){
+    W(c.xIncomplete + (c.xIncomplete===1 ? " added cost line is incomplete" : " added cost lines are incomplete"),
+      "A line only counts once it has a cost. Incomplete lines are left out of the total.",
+      "Open the Additional Costs tile and finish or remove them.");
+  }
+  overuse("MCT oil","pMct","qMct","uMct", toG(n("wMct"), sv("vMct")));
+  overuse("Liquid lecithin","pLec","qLec","uLec", toG(n("wLec"), sv("vLec")));
+  overuse("Sanding sugar","pSug","qSug","uSug", toG(n("wSug"), sv("vSug")));
+  var sd = n("wSorb");
+  overuse("Potassium sorbate","pSorb","qSorb","uSorb", isNum(sd) ? sd*DROP_G : null,
+    "Each drop is 0.05 g \u2014 " + (isNum(sd)?sd:0) + " drops is " + (isNum(sd)?(sd*DROP_G).toFixed(2):"0") + " g.");
+  overuse("Other item","pMisc","qMisc","uMisc", toG(n("wMisc"), sv("vMisc")));
+
+  var pairs = [
+    ["THC extract","pRos","qRos"],["Raw gummies","pGum","qGum"],
+    ["MCT oil","pMct","qMct"],["Liquid lecithin","pLec","qLec"],
+    ["Sanding sugar","pSug","qSug"],["Potassium sorbate","pSorb","qSorb"],
+    ["Other item","pMisc","qMisc"]
+  ];
+  for(var i=0;i<pairs.length;i++){
+    var lb=pairs[i][0], pi=pairs[i][1], qi=pairs[i][2];
+    if(n(pi) !== null && n(pi) > 0 && (n(qi) === null || n(qi) <= 0)){
+      bad(qi); E(lb + ": price entered without a quantity",
+        "You entered " + money(n(pi)) + " but not how much that bought, so there is no cost per gram to work from.",
+        "Enter the container or package size next to the price.");
+    }
+  }
+
+  if(n("pPack") !== null && n("pPack") > 0 && (n("qPack") === null || n("qPack") <= 0)){
+    bad("qPack"); E("Packaging: price entered without a piece count",
+      "Enter how many bags, jars, or tins that price bought so a per-piece cost can be worked out.");
+  }
+  if(n("nPerPack") !== null && n("nPerPack") > 0 && (n("pPack") === null || n("pPack") <= 0)){
+    bad("pPack"); W("Packaging: gummies per package set but no price",
+      "Pieces needed will be counted, but no packaging cost can be added to the total.");
+  }
+  if(c.packN !== null && n("qPack") !== null && c.packN > n("qPack")){
+    W("Packaging shortfall",
+      "This batch needs " + c.packN + " pieces but you only bought " + n("qPack") + ".",
+      "Buy more packaging or put more gummies in each one.");
+  }
+
+  /* cure / finished batch */
+  if(cu.fin !== null && isNum(cu.plan) && cu.fin > cu.plan){
+    bad("actual"); E("Finished count exceeds the planned batch",
+      "You reported " + cu.fin + " gummies but the batch was only sized for " + cu.plan + ". Waste cannot be negative.",
+      "Check the count, or raise the planned batch size to match what you really mixed.");
+  }
+  if(cu.mass !== null && r.ok && cu.mass > r.B + 1e-9){
+    bad("actualMass"); E("Finished weight exceeds the batch weight",
+      "You weighed " + cu.mass + " g of finished gummies from a " + r.B.toFixed(1) + " g batch. Curing removes moisture, it does not add mass.",
+      "Re-check the scale reading, or the mold size and batch count above.");
+  }
+  var wc = n("wcPct");
+  if(wc !== null && (wc < 0 || wc > 100)){ bad("wcPct"); E("Water content must be between 0% and 100%","Enter the moisture share of the finished gummies as a percentage."); }
+  var rh = n("curRH");
+  if(rh !== null && (rh < 0 || rh > 100)){ bad("curRH"); E("Cure humidity must be between 0% and 100%","Relative humidity is a percentage."); }
+  var dur = n("curDur");
+  if(dur !== null && dur < 0){ bad("curDur"); E("Cure duration cannot be negative","Enter how long the gummies cured."); }
+
+  if(cu.wc !== null && cu.mass === null){
+    W("Water content logged without a finished weight",
+      "Water content is a percentage, so a finished batch weight is needed to turn it into grams of water and dry solids.",
+      "Add the finished batch weight in the Finished Yield tile.");
+  }
+  var tp = n("curTemp");
+  if(tp !== null){
+    var f = (sv("curTempU") === "C") ? (tp * 9/5 + 32) : tp;
+    if(f < 40 || f > 110){
+      W("Cure temperature looks unusual (" + tp + "\u00b0" + sv("curTempU") + ")",
+        "Most gummy cures run between roughly 55\u00b0F and 75\u00b0F. Well outside that range changes texture and shelf life fast.",
+        "Confirm the reading and the unit you picked.");
+    }
+  }
+  if(rh !== null && rh > 65){
+    W("Cure humidity is high (" + rh + "%)",
+      "Above about 65% relative humidity gummies stay tacky and mold risk climbs sharply.",
+      "Dry the room down or shorten the cure.");
+  } else if(rh !== null && rh > 0 && rh < 25){
+    W("Cure humidity is very low (" + rh + "%)",
+      "Below about 25% the surface can case-harden while the centre stays soft.",
+      "This is only a problem if texture matters for your product.");
+  }
+  if(cu.unitWaste !== undefined && cu.unitWaste > 25){
+    W("Unit waste is high (" + cu.unitWaste.toFixed(1) + "%)",
+      "You lost " + cu.unitLoss + " of " + cu.plan + " planned gummies on this run.",
+      "Worth logging what went wrong in Batch Notes while it is fresh.");
+  }
+
+  return { errs:errs, warns:warns, badIds:badIds };
+}
+
+/* ================= SVG charts (no dependencies) ================= */
+function arc(cx,cy,r,a0,a1){
+  var x0=cx+r*Math.cos(a0), y0=cy+r*Math.sin(a0);
+  var x1=cx+r*Math.cos(a1), y1=cy+r*Math.sin(a1);
+  var large = (a1-a0) > Math.PI ? 1 : 0;
+  return {x0:x0,y0:y0,x1:x1,y1:y1,large:large};
+}
+function donut(items, size, hole){
+  var total=0, i;
+  for(i=0;i<items.length;i++) total += items[i].value;
+  if(!(total > 0)) return "";
+  var r = size/2, ir = r*(hole===undefined?0.58:hole), cx=r, cy=r;
+  var out = '<svg width="'+size+'" height="'+size+'" viewBox="0 0 '+size+' '+size+'" role="img">';
+  if(items.length === 1 || items[0].value >= total - 1e-12){
+    out += '<circle cx="'+cx+'" cy="'+cy+'" r="'+((r+ir)/2)+'" fill="none" stroke="'+items[0].color+'" stroke-width="'+(r-ir)+'"/>';
+  } else {
+    var a = -Math.PI/2;
+    for(i=0;i<items.length;i++){
+      var frac = items[i].value/total;
+      if(frac <= 0) continue;
+      var a2 = a + frac*Math.PI*2;
+      var o = arc(cx,cy,r,a,a2), o2 = arc(cx,cy,ir,a2,a);
+      out += '<path d="M'+o.x0.toFixed(2)+' '+o.y0.toFixed(2)
+           + ' A'+r+' '+r+' 0 '+o.large+' 1 '+o.x1.toFixed(2)+' '+o.y1.toFixed(2)
+           + ' L'+o2.x0.toFixed(2)+' '+o2.y0.toFixed(2)
+           + ' A'+ir+' '+ir+' 0 '+o.large+' 0 '+o2.x1.toFixed(2)+' '+o2.y1.toFixed(2)
+           + ' Z" fill="'+items[i].color+'" stroke="#ffffff" stroke-width="1.5"/>';
+      a = a2;
+    }
+  }
+  out += '</svg>';
+  return out;
+}
+function legend(items, fmt){
+  var total=0, i;
+  for(i=0;i<items.length;i++) total += items[i].value;
+  var out = '<div class="lg">';
+  for(i=0;i<items.length;i++){
+    var pc = total>0 ? (items[i].value/total*100) : 0;
+    out += '<div class="li"><span class="sw" style="background:'+items[i].color+'"></span>'
+        + '<span class="ln">'+esc(items[i].label)+'</span>'
+        + '<span class="lv">'+fmt(items[i].value)+'</span>'
+        + '<span class="lp">'+pc.toFixed(1)+'%</span></div>';
+  }
+  return out + '</div>';
+}
+function hbars(items, fmt){
+  var max=0, i;
+  for(i=0;i<items.length;i++) if(items[i].value > max) max = items[i].value;
+  if(!(max > 0)) return "";
+  var out = '<div class="bars">';
+  for(i=0;i<items.length;i++){
+    var w = (items[i].value/max*100);
+    out += '<div class="br"><div class="t"><span>'+esc(items[i].label)+'</span><span>'+fmt(items[i].value)+'</span></div>'
+        + '<div class="tk"><div class="fl" style="width:'+w.toFixed(1)+'%;background:'+items[i].color+'"></div></div></div>';
+  }
+  return out + '</div>';
+}
+function noData(msg){ return '<p class="mut" style="font-size:12px">'+esc(msg)+'</p>'; }
+
+function drawCharts(r, c, cu){
+  /* cost share donut */
+  var el = $("chCost");
+  if(c.lines.length){
+    var items = [];
+    for(var i=0;i<c.lines.length;i++) items.push({label:c.lines[i].label, value:c.lines[i].cost, color:c.lines[i].col});
+    items.sort(function(a,b){ return b.value - a.value; });
+    el.innerHTML = donut(items, 132) + legend(items, money);
+  } else el.innerHTML = noData("Fill in cost lines and press Calculate.");
+
+  /* mass composition donut */
+  el = $("chMass");
+  if(r.ok){
+    var mi = [
+      {label:"Raw gummy base", value:r.G,  color:"#175cd3"},
+      {label:"THC extract", value:r.R,  color:"#047857"},
+      {label:"Liquid lecithin",value:r.Lg, color:"#5925dc"},
+      {label:"Potassium sorbate",value:r.sorbG, color:"#b42318"}
+    ];
+    var keep = [];
+    for(var j=0;j<mi.length;j++) if(mi[j].value > 0) keep.push(mi[j]);
+    el.innerHTML = donut(keep, 132) + legend(keep, function(v){ return v.toFixed(2)+" g"; })
+      + '<p class="chnote">Total mixed weight ' + r.B.toFixed(1) + ' g. Extract load ' + r.load.toFixed(2) + '% of batch mass.</p>';
+  } else el.innerHTML = noData("Complete the Recipe tile and press Calculate.");
+
+  /* cost per line bars */
+  el = $("chBars");
+  if(c.lines.length){
+    var bi = [];
+    for(var k=0;k<c.lines.length;k++) bi.push({label:c.lines[k].label, value:c.lines[k].cost, color:c.lines[k].col});
+    bi.sort(function(a,b){ return b.value - a.value; });
+    el.innerHTML = hbars(bi, money);
+  } else el.innerHTML = noData("Fill in cost lines and press Calculate.");
+
+  /* yield & waste */
+  el = $("chYield");
+  var parts = [], note = [];
+  if(cu.fin !== null && isNum(cu.plan) && cu.plan > 0){
+    parts.push({label:"Finished gummies", value:cu.fin, color:"#047857"});
+    parts.push({label:"Lost in production", value:Math.max(0,cu.unitLoss), color:"#b42318"});
+    note.push("Unit waste " + cu.unitWaste.toFixed(1) + "% of " + cu.plan + " planned.");
+  }
+  if(parts.length){
+    var yh = donut(parts, 132) + legend(parts, function(v){ return String(v); });
+    var mb = [];
+    if(cu.massWaste !== undefined) mb.push({label:"Mass lost in cure", value:cu.massWaste, color:"#b54708"});
+    if(cu.unitWaste !== undefined) mb.push({label:"Unit waste", value:cu.unitWaste, color:"#b42318"});
+    if(cu.wc !== null && cu.wc !== undefined) mb.push({label:"Water in finished", value:cu.wc, color:"#175cd3"});
+    if(mb.length) yh += '<div style="width:100%">' + hbars(mb, function(v){ return v.toFixed(1)+"%"; }) + '</div>';
+    if(cu.solids !== undefined) note.push("Dry solids " + cu.solids.toFixed(1) + " g of " + cu.mass.toFixed(1) + " g finished.");
+    if(note.length) yh += '<p class="chnote">' + esc(note.join(" ")) + '</p>';
+    el.innerHTML = yh;
+  } else el.innerHTML = noData("Log the finished gummy count to see yield and waste.");
+}
+
+/* ================= cure log table ================= */
+function drawLog(r, c, cu){
+  if(!cu.any){ $("logSec").style.display = "none"; $("logTable").innerHTML = ""; return; }
+  $("logSec").style.display = "";
+  var rows = [];
+  function row(k,v){ if(v !== null && v !== undefined && v !== "") rows.push([k,v]); }
+  row("Batch name", sv("batchName") || "Unnamed");
+  row("Infusion material", sv("infusionMaterial") || null);
+  row("Logged", new Date().toLocaleString());
+  row("Planned gummies", isNum(cu.plan) ? cu.plan : null);
+  row("Finished gummies", cu.fin);
+  if(cu.unitLoss !== undefined) row("Units lost", cu.unitLoss + " (" + cu.unitWaste.toFixed(1) + "% waste)");
+  if(cu.yieldPct !== undefined) row("Unit yield", cu.yieldPct.toFixed(1) + "%");
+  if(r.ok) row("Batch weight mixed", r.B.toFixed(1) + " g");
+  if(cu.mass !== null) row("Finished weight", cu.mass.toFixed(1) + " g");
+  if(cu.massLoss !== undefined) row("Mass lost in cure", cu.massLoss.toFixed(1) + " g (" + cu.massWaste.toFixed(1) + "%)");
+  if(cu.perGummy !== undefined) row("Actual weight per gummy", cu.perGummy.toFixed(2) + " g");
+  if(cu.wc !== null) row("Water content after cure", cu.wc.toFixed(1) + "%");
+  if(cu.water !== undefined) row("Water in finished batch", cu.water.toFixed(1) + " g");
+  if(cu.solids !== undefined) row("Dry solids", cu.solids.toFixed(1) + " g");
+  if(cu.dur !== null) row("Cure duration", cu.dur + " " + cu.durU);
+  if(cu.temp !== null) row("Cure room temperature", cu.temp + "\u00b0" + cu.tempU);
+  if(cu.rh !== null) row("Cure room humidity", cu.rh + "%");
+  if(c.lines.length) row("Total batch cost", money(c.total));
+  if(c.lines.length && cu.fin) row("True cost per finished gummy", money(c.total/cu.fin));
+  if(c.lines.length && c.packN) row("True cost per finished pack", money(c.total/c.packN) + " (" + c.packN + " packs of " + c.perPack + ")");
+  if(c.prodLaborC !== null || c.packLaborC !== null) row("Labor cost (production + packaging)", money((c.prodLaborC||0)+(c.packLaborC||0)));
+  if(c.boxCost !== null) row("Box cost", money(c.boxCost) + " (" + c.boxN + " box" + (c.boxN===1?"":"es") + ")");
+  if(c.gumLeftG) row("Leftover gummy base (already paid for)", g(c.gumLeftG,2) + (c.gumLeftC!==null?" ("+money(c.gumLeftC)+")":""));
+  if(cu.note) row("Notes", cu.note);
+
+  var html = "<tbody>";
+  for(var i=0;i<rows.length;i++) html += '<tr><td class="k">'+esc(rows[i][0])+'</td><td>'+esc(String(rows[i][1]))+'</td></tr>';
+  $("logTable").innerHTML = html + "</tbody>";
+}
+
+/* ================= render ================= */
+var reportLive = false;
+
+function render(){
+  var r = recipe();
+  var cu = cure(r);
+  var c = costs(r, cu);
+
+  /* material cards */
+  if(r.ok){
+    setTxt("oGum", g(r.G,2));
+    setTxt("oGumS", "Pre-made gummies to melt \u00b7 " + (r.G/GPU.lb).toFixed(2) + " lb");
+    setTxt("oRos", r.R.toFixed(3) + " g");
+    setTxt("oRosS", "@ " + r.p + "% THC" + (r.e !== 100 ? (" \u00b7 includes " + (100-r.e) + "% buffer") : ""));
+    setTxt("oLec", r.Lg.toFixed(3) + " g");
+    setTxt("oLecS", "For emulsification \u00b7 " + r.Lr + "% of gummy mass");
+    setTxt("oBatch", r.B.toFixed(1) + " g");
+    setTxt("oBatchS", "Mixed weight before demolding");
+    setTxt("oDrops", r.drops + (r.drops===1?" drop":" drops"));
+    setTxt("oDropsS", "1 drop per " + SORB_PER_G + " g \u00b7 " + DROP_G + " g each \u00b7 " + r.sorbG.toFixed(2) + " g total");
+    setTxt("oYield", r.plan + " gummies");
+    var ys;
+    if(mode === "count"){
+      ys = "At " + r.d + " mg each \u00b7 " + r.m + " g per gummy";
+      if(r.plan !== r.target) ys += " \u00b7 " + r.target + " target + " + r.ov + "% overage";
+    } else {
+      ys = "From " + r.avail + " g of " + r.leftoverKind + " \u00b7 " + r.leftover.toFixed(3) + " g left over";
+    }
+    setTxt("oYieldS", ys);
+    setTxt("sThc", (r.thcTotal/1000).toFixed(2) + " g");
+    setTxt("sThcS", r.thcTotal.toFixed(0) + " mg total \u00b7 " + r.d + " mg per gummy");
+    setTxt("sLb", (r.G/GPU.lb).toFixed(3) + " lb");
+    setTxt("sLbS", (r.G/GPU.oz).toFixed(2) + " oz \u00b7 " + (r.G/(5*GPU.lb)).toFixed(2) + " of a 5 lb bag");
+    setTxt("sLoad", r.load.toFixed(2) + "%");
+    setTxt("sRpg", r.rpg.toFixed(4) + " g");
+    setTxt("matSub", "Weigh to these numbers to make " + r.plan + " gummies at " + r.d + " mg each.");
+  } else {
+    var ids = ["oGum","oRos","oLec","oBatch","oDrops","oYield","sThc","sLb","sLoad","sRpg"];
+    for(var i=0;i<ids.length;i++) setTxt(ids[i], DASH());
+    var subs = ["oGumS","oRosS","oLecS","oBatchS","oDropsS","oYieldS","sThcS","sLbS"];
+    for(var j=0;j<subs.length;j++) setTxt(subs[j], "\u00a0");
+    setTxt("matSub", "Fill in the Recipe tile and a solve mode to see your material weights.");
+  }
+
+  /* cure stats */
+  setTxt("yWaste", cu.unitWaste !== undefined ? cu.unitWaste.toFixed(1) + "%" : DASH());
+  setTxt("yWasteS", cu.unitLoss !== undefined ? (cu.unitLoss + " of " + cu.plan + " gummies lost") : "planned vs finished");
+  setTxt("yMass", cu.massWaste !== undefined ? cu.massWaste.toFixed(1) + "%" : DASH());
+  setTxt("yMassS", cu.massLoss !== undefined ? (cu.massLoss.toFixed(1) + " g lighter after cure") : "batch vs finished weight");
+  setTxt("yWater", cu.water !== undefined ? cu.water.toFixed(1) + " g" : DASH());
+  setTxt("yWaterS", cu.wc !== null && cu.wc !== undefined ? (cu.wc.toFixed(1) + "% of finished weight") : "needs weight + water content");
+  setTxt("ySolid", cu.solids !== undefined ? cu.solids.toFixed(1) + " g" : DASH());
+  setTxt("ySolidS", cu.perGummy !== undefined ? (cu.perGummy.toFixed(2) + " g per finished gummy") : "after cure");
+
+  if(reportLive) paintReport(r, c, cu);
+  refreshTiles();
+  return { r:r, c:c, cu:cu };
+}
+
+function paintReport(r, c, cu){
+  var body = $("tBody");
+  if(!c.lines.length){
+    body.innerHTML = '<tr><td colspan="5" class="mut center" style="padding:18px">No cost inputs filled yet.</td></tr>';
+    setTxt("tTotal", DASH()); setTxt("tPer", DASH()); setTxt("tPack", DASH()); setTxt("tMg", DASH());
+    setTxt("tTotalS","all filled lines"); setTxt("tPerS","\u00a0"); setTxt("tPackS","\u00a0"); setTxt("tMgS","\u00a0");
+  } else {
+    var html = "", i;
+    for(i=0;i<c.lines.length;i++){
+      var L = c.lines[i];
+      html += '<tr><td><span style="display:inline-block;width:8px;height:8px;border-radius:2px;background:'
+            + L.col + ';margin-right:7px"></span>' + esc(L.label) + '</td>'
+            + '<td class="r">' + esc(L.qty) + '</td><td class="r">' + esc(L.unit) + '</td>'
+            + '<td class="r">' + money(L.cost) + '</td>'
+            + '<td class="r">' + (c.total>0 ? (L.cost/c.total*100).toFixed(1) : "0.0") + '%</td></tr>';
+    }
+    html += '<tr class="tot"><td>Total</td><td class="r"></td><td class="r"></td><td class="r">'
+          + money(c.total) + '</td><td class="r">100%</td></tr>';
+    body.innerHTML = html;
+
+    setTxt("tTotal", money(c.total));
+    setTxt("tTotalS", c.lines.length + (c.lines.length===1?" line counted":" lines counted"));
+    if(isNum(c.usedCount) && c.usedCount > 0){
+      setTxt("tPer", money(c.total/c.usedCount));
+      setTxt("tPerS", "on " + c.usedCount + (cu.fin !== null && cu.fin > 0 ? " finished" : " planned") + " gummies");
+    } else { setTxt("tPer", DASH()); setTxt("tPerS","\u00a0"); }
+    if(c.packN !== null && c.packN > 0){
+      setTxt("tPack", money(c.total/c.packN));
+      setTxt("tPackS", c.packN + " packages of " + c.perPack + " \u2014 includes labor & boxes");
+    } else { setTxt("tPack", DASH()); setTxt("tPackS","set gummies per package"); }
+    if(r.ok && r.thcTotal > 0){
+      setTxt("tMg", "$" + (c.total/r.thcTotal).toFixed(4));
+      setTxt("tMgS", r.thcTotal.toFixed(0) + " mg THC in batch");
+    } else { setTxt("tMg", DASH()); setTxt("tMgS","\u00a0"); }
+  }
+  drawCharts(r, c, cu);
+  drawLog(r, c, cu);
+}
+
+/* ================= modal helpers ================= */
+function openM(id){ $(id).classList.add("on"); }
+function closeM(id){ if(id === "ovPanel") closePanel(); else $(id).classList.remove("on"); }
+
+var ICO_ERR = '<svg class="ii" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>';
+var ICO_WARN = '<svg class="ii" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2.2" stroke-linecap="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>';
+var ICO_OK = '<svg class="ii" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.2" stroke-linecap="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>';
+
+function showIssues(v, okMsg, okTitle, okBad){
+  var body = $("errBody"), hd = $("errHd"), html = "", i;
+  var nE = v.errs.length, nW = v.warns.length;
+  hd.style.background = "";
+
+  if(nE === 0 && nW === 0){
+    if(okBad){
+      hd.className = "mod-hd h-err";
+      hd.style.background = "#b54708";
+      setTxt("errTitle", okTitle || "Could not complete that");
+      setTxt("errSub", "The recipe is fine \u2014 the action is not");
+      body.innerHTML = '<div class="iss w">' + ICO_WARN
+        + '<div><div class="it">' + esc(okTitle || "Action failed") + '</div><div class="id">' + esc(okMsg) + '</div></div></div>';
+      openM("ovErr");
+      return;
+    }
+    hd.className = "mod-hd h-ok";
+    setTxt("errTitle", okTitle || "Everything checks out");
+    setTxt("errSub","No contradictions found");
+    body.innerHTML = '<div class="iss" style="background:#ecfdf5;border-left-color:#059669">' + ICO_OK
+      + '<div><div class="it">' + esc(okTitle || "Report generated") + '</div><div class="id">' + esc(okMsg) + '</div></div></div>';
+    openM("ovErr");
+    return;
+  }
+
+  if(nE > 0){
+    hd.className = "mod-hd h-err";
+    setTxt("errTitle", nE + (nE===1 ? " problem to fix" : " problems to fix"));
+    setTxt("errSub", nW > 0 ? ("Plus " + nW + " warning" + (nW===1?"":"s")) : "Highlighted tiles need attention");
+  } else {
+    hd.className = "mod-hd h-err";
+    hd.style.background = "#b54708";
+    setTxt("errTitle", nW + (nW===1 ? " warning" : " warnings"));
+    setTxt("errSub", "Report was generated anyway");
+  }
+
+  for(i=0;i<v.errs.length;i++){
+    html += '<div class="iss">' + ICO_ERR + '<div><div class="it">' + esc(v.errs[i].t) + '</div><div class="id">'
+          + esc(v.errs[i].d) + '</div>' + (v.errs[i].f ? '<div class="ih">\u2192 ' + esc(v.errs[i].f) + '</div>' : '') + '</div></div>';
+  }
+  for(i=0;i<v.warns.length;i++){
+    html += '<div class="iss w">' + ICO_WARN + '<div><div class="it">' + esc(v.warns[i].t) + '</div><div class="id">'
+          + esc(v.warns[i].d) + '</div>' + (v.warns[i].f ? '<div class="ih">\u2192 ' + esc(v.warns[i].f) + '</div>' : '') + '</div></div>';
+  }
+  body.innerHTML = html;
+  openM("ovErr");
+}
+
+/* map field id -> group id, so we can flag the tile that owns a bad field */
+var FIELD_GRP = {};
+function buildFieldMap(){
+  for(var i=0;i<TILES.length;i++){
+    var grp = $(TILES[i].grp);
+    if(!grp) continue;
+    var els = grp.querySelectorAll("input[id],select[id]");
+    for(var j=0;j<els.length;j++) FIELD_GRP[els[j].id] = TILES[i].grp;
+  }
+}
+function clearBad(){
+  var els = document.querySelectorAll(".bad");
+  for(var i=0;i<els.length;i++) els[i].classList.remove("bad");
+  for(var j=0;j<TILES.length;j++){
+    var tb = document.querySelector('.tile[data-grp="'+TILES[j].grp+'"]');
+    if(tb) tb.classList.remove("err");
+    var d = $("td_"+TILES[j].grp);
+    if(d) d.classList.remove("err");
+  }
+}
+function markBad(ids){
+  for(var i=0;i<ids.length;i++){
+    var el = $(ids[i]);
+    if(el) el.classList.add("bad");
+    var grp = FIELD_GRP[ids[i]];
+    if(grp){
+      var tb = document.querySelector('.tile[data-grp="'+grp+'"]');
+      if(tb) tb.classList.add("err");
+      var d = $("td_"+grp);
+      if(d) d.classList.add("err");
+    }
+  }
+}
+
+function doCalc(){
+  track("calculate");
+  reportLive = true;
+  clearBad();
+  var o = render();
+  var v = validate(o.r, o.c, o.cu);
+  markBad(v.badIds);
+  if(v.errs.length){
+    paintReport(recipe(), {lines:[],total:0,usedCount:null,perPack:null,packN:null}, o.cu);
+  } else {
+    paintReport(o.r, o.c, o.cu);
+  }
+  var msg;
+  if(o.c.lines.length){
+    msg = "Total batch cost " + money(o.c.total) + " across " + o.c.lines.length + " line items"
+        + (isNum(o.c.usedCount) && o.c.usedCount>0 ? ", " + money(o.c.total/o.c.usedCount) + " per gummy." : ".");
+  } else if(o.r.ok){
+    msg = "Recipe is valid. Fill in any cost line to build the expense report.";
+  } else {
+    msg = "Report refreshed.";
+  }
+  if(o.cu.unitWaste !== undefined) msg += " Unit waste " + o.cu.unitWaste.toFixed(1) + "%.";
+  showIssues(v, msg);
+}
+
+/* ================= report text ================= */
+function report(){
+  var o = render(), r = o.r, c = o.c, cu = o.cu;
+  var L = [], i;
+  L.push("GUMMYLOGICS INFUSED GUMMY CALCULATOR \u2014 BATCH REPORT");
+  L.push("=========================================================");
+  L.push("Batch:      " + (sv("batchName") || "Unnamed"));
+  if(sv("infusionMaterial")) L.push("Extract:    " + sv("infusionMaterial"));
+  L.push("Generated:  " + new Date().toLocaleString());
+  L.push("");
+  L.push("RECIPE");
+  L.push("  Solve mode:            " + (mode==="count"?"Target gummy count":(mode==="gummy"?"Limited by gummy base":"Limited by extract on hand")));
+  L.push("  Mold size:             " + (n("moldSize")===null?"-":n("moldSize")) + " g per gummy");
+  L.push("  Target THC:            " + (n("thcPerGummy")===null?"-":n("thcPerGummy")) + " mg per gummy");
+  L.push("  Extract THC:           " + (n("rosinPct")===null?"-":n("rosinPct")) + " %");
+  L.push("  Extra extract buffer:  " + lossPct() + " %");
+  L.push("  Lecithin ratio:        " + (n("lecRatio")===null?0:n("lecRatio")) + " %");
+  L.push("  Overage:               " + (n("overage")===null?0:n("overage")) + " %");
+  L.push("");
+  if(r.ok){
+    L.push("MATERIALS TO WEIGH");
+    L.push("  Raw gummy base:        " + r.G.toFixed(2) + " g  (" + (r.G/GPU.lb).toFixed(3) + " lb)");
+    L.push("  THC extract:           " + r.R.toFixed(3) + " g");
+    L.push("  Liquid lecithin:       " + r.Lg.toFixed(3) + " g");
+    L.push("  Potassium sorbate:     " + r.drops + " drops (" + r.sorbG.toFixed(2) + " g)");
+    L.push("  ----------------------------------------");
+    L.push("  Total batch size:      " + r.B.toFixed(1) + " g");
+    L.push("  Planned gummies:       " + r.plan);
+    L.push("  Total THC in batch:    " + r.thcTotal.toFixed(0) + " mg");
+    L.push("  Extract load:          " + r.load.toFixed(2) + " % of batch mass");
+    L.push("  Extract per gummy:     " + r.rpg.toFixed(4) + " g");
+    if(mode !== "count") L.push("  Leftover " + r.leftoverKind + ": " + r.leftover.toFixed(3) + " g");
+    L.push("");
+  }
+  if(c.lines.length){
+    L.push("COST BREAKDOWN");
+    for(i=0;i<c.lines.length;i++){
+      var nm = (c.lines[i].label + "                        ").slice(0,24);
+      L.push("  " + nm + " " + (c.lines[i].qty + "            ").slice(0,13)
+           + " " + (c.lines[i].unit + "            ").slice(0,13)
+           + " " + money(c.lines[i].cost));
+    }
+    L.push("  ------------------------------------------------------");
+    L.push("  TOTAL BATCH COST:      " + money(c.total));
+    if(isNum(c.usedCount) && c.usedCount>0) L.push("  Cost per gummy:        " + money(c.total/c.usedCount) + " (on " + c.usedCount + (cu.fin?" finished":" planned") + ")");
+    if(c.packN) L.push("  TRUE COST PER FINISHED PACK: " + money(c.total/c.packN) + " (" + c.packN + " packs of " + c.perPack + ", includes labor & boxes)");
+    if(r.ok && r.thcTotal>0) L.push("  Cost per mg THC:       $" + (c.total/r.thcTotal).toFixed(4));
+    if(c.gumLeftG) L.push("  Note: " + g(c.gumLeftG,2) + " of gummy base already paid for is left in the bag for a future batch (" + (c.gumLeftC!==null?money(c.gumLeftC):"-") + " not yet used).");
+    L.push("");
+  }
+  if(c.prodLaborC !== null || c.packLaborC !== null || c.boxCost !== null){
+    L.push("LABOR & BOXES");
+    if(c.prodHrs !== null)   L.push("  Production time:       " + c.prodHrs.toFixed(2) + " hr" + (c.laborRate!==null?" @ "+money(c.laborRate)+"/hr = "+money(c.prodLaborC||0):""));
+    if(c.packHrs !== null)   L.push("  Packaging time:        " + c.packHrs.toFixed(2) + " hr" + (c.laborRate!==null?" @ "+money(c.laborRate)+"/hr = "+money(c.packLaborC||0):""));
+    if(c.boxCost !== null)   L.push("  Boxes used:            " + c.boxN + " box" + (c.boxN===1?"":"es") + " = " + money(c.boxCost));
+    L.push("");
+  }
+  if(cu.any){
+    L.push("CURE & WASTE RECORD");
+    if(isNum(cu.plan))              L.push("  Planned gummies:       " + cu.plan);
+    if(cu.fin !== null)             L.push("  Finished gummies:      " + cu.fin);
+    if(cu.unitLoss !== undefined)   L.push("  Units lost:            " + cu.unitLoss + "  (" + cu.unitWaste.toFixed(1) + " % waste)");
+    if(cu.yieldPct !== undefined)   L.push("  Unit yield:            " + cu.yieldPct.toFixed(1) + " %");
+    if(r.ok)                        L.push("  Batch weight mixed:    " + r.B.toFixed(1) + " g");
+    if(cu.mass !== null)            L.push("  Finished weight:       " + cu.mass.toFixed(1) + " g");
+    if(cu.massLoss !== undefined)   L.push("  Mass lost in cure:     " + cu.massLoss.toFixed(1) + " g  (" + cu.massWaste.toFixed(1) + " %)");
+    if(cu.perGummy !== undefined)   L.push("  Weight per gummy:      " + cu.perGummy.toFixed(2) + " g");
+    if(cu.wc !== null)              L.push("  Water content:         " + cu.wc.toFixed(1) + " %");
+    if(cu.water !== undefined)      L.push("  Water in finished:     " + cu.water.toFixed(1) + " g");
+    if(cu.solids !== undefined)     L.push("  Dry solids:            " + cu.solids.toFixed(1) + " g");
+    if(cu.dur !== null)             L.push("  Cure duration:         " + cu.dur + " " + cu.durU);
+    if(cu.rh !== null)              L.push("  Cure room humidity:    " + cu.rh + " %");
+    if(cu.note)                     L.push("  Notes:                 " + cu.note);
+    L.push("");
+  }
+  L.push("---------------------------------------------------------");
+  L.push("Keep temperature below 180 F when melting to preserve potency.");
+  return L.join("\n");
+}
+
+function slug(){
+  var nm = sv("batchName") || "batch";
+  return nm.replace(/[^a-z0-9]+/gi,"_").replace(/^_+|_+$/g,"").toLowerCase() || "batch";
+}
+
+/* ================= export / print / copy ================= */
+function doExport(){
+  track("export");
+  var txt = report();
+  try {
+    var blob = new Blob([txt], {type:"text/plain;charset=utf-8"});
+    var url = URL.createObjectURL(blob);
+    var a = document.createElement("a");
+    a.href = url;
+    a.download = "gummy_batch_" + slug() + "_" + new Date().toISOString().slice(0,10) + ".txt";
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    setTimeout(function(){ URL.revokeObjectURL(url); }, 4000);
+    showIssues({errs:[],warns:[],badIds:[]}, "Text report downloaded to your downloads folder.", "Export complete");
+  } catch(e){
+    showIssues({errs:[],warns:[],badIds:[]}, "This browser blocked the download. Use Copy instead and paste into a text file.", "Export blocked", true);
+  }
+}
+
+function doPrint(){
+  track("print");
+  if(!reportLive) doCalcQuiet();
+  window.print();
+}
+
+function doCopy(){
+  track("copy");
+  var txt = report();
+  function ok(){ showIssues({errs:[],warns:[],badIds:[]}, "Full batch report copied to your clipboard.", "Copied"); }
+  function fallback(){
+    try{
+      var ta = document.createElement("textarea");
+      ta.value = txt;
+      ta.style.position = "fixed"; ta.style.left = "-9999px";
+      document.body.appendChild(ta);
+      ta.select();
+      var done = document.execCommand("copy");
+      document.body.removeChild(ta);
+      if(done) ok();
+      else showIssues({errs:[],warns:[],badIds:[]}, "Clipboard access was refused. Use Export to save a text file instead.", "Copy blocked", true);
+    } catch(e){
+      showIssues({errs:[],warns:[],badIds:[]}, "Clipboard access was refused. Use Export to save a text file instead.", "Copy blocked", true);
+    }
+  }
+  if(navigator.clipboard && navigator.clipboard.writeText){
+    navigator.clipboard.writeText(txt).then(ok, fallback);
+  } else fallback();
+}
+
+/* ================= snapshot / restore ================= */
+var defaultVal = {};
+var defaultSel = {};
+
+function captureDefaults(){
+  var els = document.querySelectorAll("input[id],select[id]");
+  for(var i=0;i<els.length;i++){
+    var e = els[i];
+    if(e.tagName === "SELECT") defaultSel[e.id] = e.selectedIndex;
+    else if(e.type !== "checkbox" && e.type !== "radio") defaultVal[e.id] = e.value;
+  }
+}
+
+function snapshot(){
+  var o = { _mode: mode, _v: 3 };
+  var els = document.querySelectorAll("input[id],select[id]");
+  for(var i=0;i<els.length;i++){
+    var e = els[i];
+    if(e.type === "radio") continue;
+    o[e.id] = (e.type === "checkbox") ? !!e.checked : e.value;
+  }
+  o._xtra = [];
+  for(var x=0;x<XTRA.length;x++){
+    var xd = XTRA[x];
+    o._xtra.push({ L:sv("xL"+xd), T:sv("xT"+xd), C:sv("xC"+xd),
+                   P:sv("xP"+xd), Q:sv("xQ"+xd), U:sv("xU"+xd),
+                   A:sv("xA"+xd), V:sv("xV"+xd) });
+  }
+  return o;
+}
+
+function setV(id, v){ var e = $(id); if(e && v !== undefined && v !== null) e.value = v; }
+
+function restore(o){
+  if(!o) return;
+  xtraSet(o._xtra && o._xtra.length ? o._xtra.length : 0);
+  var els = document.querySelectorAll("input[id],select[id]");
+  for(var i=0;i<els.length;i++){
+    var e = els[i];
+    if(e.type === "radio") continue;
+    if(!o.hasOwnProperty(e.id)) continue;
+    if(e.type === "checkbox") e.checked = !!o[e.id];
+    else e.value = o[e.id];
+  }
+  if(o._xtra){
+    for(var x=0;x<o._xtra.length;x++){
+      var xd = XTRA[x], v = o._xtra[x];
+      if(!xd) continue;
+      setV("xL"+xd, v.L); setV("xT"+xd, v.T); setV("xC"+xd, v.C);
+      setV("xP"+xd, v.P); setV("xQ"+xd, v.Q); setV("xU"+xd, v.U);
+      setV("xA"+xd, v.A); setV("xV"+xd, v.V);
+    }
+  }
+  setMode(o._mode || "count");
+}
+
+/* ================= saved batches ================= */
+function readStore(){
+  try{
+    var raw = localStorage.getItem(LS_KEY);
+    if(!raw) return [];
+    var a = JSON.parse(raw);
+    return (a && a.length) ? a : [];
+  } catch(e){ return []; }
+}
+function writeStore(a){
+  try{ localStorage.setItem(LS_KEY, JSON.stringify(a)); return true; }
+  catch(e){ return false; }
+}
+
+function doSave(){
+  track("save_batch");
+  var nm = sv("batchName");
+  if(!nm){
+    var grp = FIELD_GRP["batchName"];
+    markBad(["batchName"]);
+    showIssues({
+      errs:[{t:"Batch needs a name", d:"Name the batch first so you can find it again in the saved list.", f:"Open the Batch Name tile and type a label."}],
+      warns:[], badIds:["batchName"]
+    });
+    if(grp) openPanel(grp);
+    return;
+  }
+  var list = readStore();
+  var rec = { name: nm, when: new Date().toISOString(), data: snapshot() };
+  var replaced = false, i;
+  for(i=0;i<list.length;i++){
+    if(list[i].name === nm){ list[i] = rec; replaced = true; break; }
+  }
+  if(!replaced) list.unshift(rec);
+  if(list.length > 40) list = list.slice(0,40);
+  if(writeStore(list)){
+    paintSaved();
+    showIssues({errs:[],warns:[],badIds:[]},
+      (replaced ? "Updated \u201c" : "Saved \u201c") + nm + "\u201d in this browser. Click it in Saved Batches to reload every input.",
+      replaced ? "Batch updated" : "Batch saved");
+  } else {
+    showIssues({errs:[],warns:[],badIds:[]},
+      "This browser refused to write local storage, so the batch was not kept. Private browsing usually causes this \u2014 use Export to save a text copy.",
+      "Could not save", true);
+  }
+}
+
+function paintSaved(){
+  var list = readStore(), wrap = $("svWrap"), box = $("svList");
+  if(!list.length){ wrap.style.display = "none"; box.innerHTML = ""; return; }
+  wrap.style.display = "";
+  var html = "", i;
+  for(i=0;i<list.length;i++){
+    var d = new Date(list[i].when);
+    var when = isNaN(d.getTime()) ? "" : d.toLocaleString();
+    html += '<div class="sv"><span><span class="nm">' + esc(list[i].name) + '</span>'
+          + '<span class="wh">' + esc(when) + '</span></span>'
+          + '<span class="sva">'
+          + '<button class="btn b-blue sm" data-load="' + i + '">Load</button>'
+          + '<button class="btn b-slate sm" data-del="' + i + '">Delete</button>'
+          + '</span></div>';
+  }
+  box.innerHTML = html;
+}
+
+function doLoad(idx){
+  var list = readStore();
+  if(!list[idx]) return;
+  closePanel();
+  restore(list[idx].data);
+  clearBad();
+  doCalcQuiet();
+  showIssues({errs:[],warns:[],badIds:[]},
+    "Loaded \u201c" + list[idx].name + "\u201d. Every input was restored \u2014 press Calculate to re-check it.",
+    "Batch loaded");
+}
+
+function doDel(idx){
+  var list = readStore();
+  if(!list[idx]) return;
+  var nm = list[idx].name;
+  list.splice(idx,1);
+  writeStore(list);
+  paintSaved();
+  showIssues({errs:[],warns:[],badIds:[]}, "Deleted \u201c" + nm + "\u201d from this browser.", "Batch deleted");
+}
+
+/* ================= reset ================= */
+function doReset(){
+  closePanel();
+  xtraSet(0);
+  var els = document.querySelectorAll("input[id],select[id]");
+  for(var i=0;i<els.length;i++){
+    var e = els[i];
+    if(e.type === "checkbox") e.checked = (e.id === "aLec" || e.id === "aSorb" || e.id === "aLbl");
+    else if(e.tagName === "SELECT") e.selectedIndex = defaultSel[e.id] || 0;
+    else if(e.type === "radio") continue;
+    else e.value = defaultVal.hasOwnProperty(e.id) ? defaultVal[e.id] : "";
+  }
+  clearBad();
+  reportLive = false;
+  setMode("count");
+  $("logSec").style.display = "none";
+  paintReport(recipe(), {lines:[],total:0,usedCount:null,perPack:null,packN:null}, cure(recipe()));
+  showIssues({errs:[],warns:[],badIds:[]}, "Every field is back to its starting value. Saved batches were not touched.", "Form reset");
+}
+
+/* quiet recalc — refresh the report without popping the modal */
+function doCalcQuiet(){
+  reportLive = true;
+  clearBad();
+  var o = render();
+  var v = validate(o.r, o.c, o.cu);
+  markBad(v.badIds);
+  paintReport(o.r, o.c, o.cu);
+}
+
+/* ================= wiring ================= */
+function wire(){
+  captureDefaults();
+  buildTiles();
+  buildFieldMap();
+
+  /* tiles open their panel */
+  document.addEventListener("click", function(ev){
+    var t = ev.target;
+    while(t && t !== document){
+      if(t.classList && t.classList.contains("tile")){
+        if(!requireAge()) return;
+        openPanel(t.getAttribute("data-grp")); return;
+      }
+      if(t.getAttribute && t.getAttribute("data-close")){ closeM(t.getAttribute("data-close")); return; }
+      if(t.getAttribute && t.getAttribute("data-load") !== null && t.getAttribute("data-load") !== undefined && t.hasAttribute("data-load")){
+        doLoad(Number(t.getAttribute("data-load"))); return;
+      }
+      if(t.hasAttribute && t.hasAttribute("data-del")){ doDel(Number(t.getAttribute("data-del"))); return; }
+      if(t.id === "btnAddLine"){ xtraAdd(); return; }
+      if(t.getAttribute && t.hasAttribute("data-xdel")){ xtraDel(Number(t.getAttribute("data-xdel"))); return; }
+      if(t.classList && t.classList.contains("act-save")){ requireAge(doSave); return; }
+      if(t.classList && t.classList.contains("act-export")){ requireAge(doExport); return; }
+      if(t.classList && t.classList.contains("act-print")){ requireAge(doPrint); return; }
+      if(t.classList && t.classList.contains("act-copy")){ requireAge(doCopy); return; }
+      if(t.classList && t.classList.contains("act-reset")){ requireAge(doReset); return; }
+      t = t.parentNode;
+    }
+  }, false);
+
+  /* backdrop click closes overlays — age gate cannot be dismissed this way */
+  var ovs = document.querySelectorAll(".ov");
+  for(var k=0;k<ovs.length;k++){
+    ovs[k].addEventListener("click", function(ev){
+      if(ev.target === this && this.id !== "ovAge") closeM(this.id);
+    }, false);
+  }
+
+  /* esc closes the topmost overlay — skip the age gate */
+  document.addEventListener("keydown", function(ev){
+    if(ev.key === "Escape" || ev.keyCode === 27){
+      var open = document.querySelectorAll(".ov.on");
+      for(var i=open.length-1;i>=0;i--){
+        if(open[i].id === "ovAge") continue;
+        closeM(open[i].id);
+        break;
+      }
+    }
+  }, false);
+
+  $("btnAgeYes").addEventListener("click", ageYes, false);
+  $("btnAgeNo").addEventListener("click", ageNo, false);
+  if($("btnCkAccept")) $("btnCkAccept").addEventListener("click", function(){ saveConsent(true); }, false);
+  if($("btnCkReject")) $("btnCkReject").addEventListener("click", function(){ saveConsent(false); }, false);
+  if($("btnCkCustom")) $("btnCkCustom").addEventListener("click", function(){
+    $("ckOpt").classList.add("on");
+  }, false);
+  if($("btnCookiePrefs")) $("btnCookiePrefs").addEventListener("click", function(){ showCookieBar(true); }, false);
+  if($("ckAnalytics")) $("ckAnalytics").addEventListener("change", function(){
+    writeConsent(!!this.checked);
+  }, false);
+
+  $("btnCalc").addEventListener("click", function(){ requireAge(doCalc); }, false);
+  $("btnCalc2").addEventListener("click", function(){
+    requireAge(function(){
+      doCalc();
+      var rp = $("tBody");
+      if(rp && rp.scrollIntoView) rp.scrollIntoView({block:"center"});
+    });
+  }, false);
+  $("btnGuide").addEventListener("click", function(){ requireAge(function(){ openM("ovGuide"); }); }, false);
+  $("panClear").addEventListener("click", function(){ if(openGrp) clearGroup(openGrp); }, false);
+
+  /* mode radios */
+  var ms = document.querySelectorAll(".mode");
+  for(var i=0;i<ms.length;i++){
+    ms[i].addEventListener("click", function(){
+      setMode(this.getAttribute("data-mode"));
+    }, false);
+  }
+
+  /* live recalc on any input */
+  document.addEventListener("input", function(ev){
+    if(ev.target && (ev.target.tagName === "INPUT" || ev.target.tagName === "SELECT")){
+      ev.target.classList.remove("bad");
+      render();
+    }
+  }, false);
+  document.addEventListener("change", function(ev){
+    if(ev.target && (ev.target.tagName === "INPUT" || ev.target.tagName === "SELECT")) render();
+  }, false);
+
+  /* enter key = calculate */
+  document.addEventListener("keydown", function(ev){
+    if((ev.key === "Enter" || ev.keyCode === 13) && ev.target && ev.target.tagName === "INPUT" && ev.target.type !== "checkbox"){
+      ev.preventDefault();
+      if(openGrp) closePanel();
+      doCalc();
+    }
+  }, false);
+
+  setTxt("yr", String(new Date().getFullYear()));
+  setMode("count");
+  paintSaved();
+  render();
+  if(!ageVerified()) openAgeGate();
+  else maybeShowCookies();
+}
+
+if(document.readyState === "loading") document.addEventListener("DOMContentLoaded", wire, false);
+else wire();
+
+})();
+</script>
+<script data-pplx-inline-edit>
+(function () {
+  if (window === window.top) return;
+
+  const allowedParentOrigins = ["https://www.perplexity.ai","https://perplexity.ai","https://testing.perplexity.ai","https://staging.perplexity.ai","https://*.preview.i.perplexity.ai","http://perplexity.localhost","http://localhost:1420","http://127.0.0.1:1420","http://localhost:3000","http://127.0.0.1:3000","http://localhost:5173","http://127.0.0.1:5173"];
+  const MAX_FONT_BYTES = 500 * 1024;
+  const MAX_TOTAL_FONT_BYTES = 2 * 1024 * 1024;
+  let scrollForwarding = false;
+  let scrollRaf = 0;
+  let trustedTopOrigin = null;
+
+  // Allow entries like "https://*.preview.i.perplexity.ai" — the wildcard
+  // matches a single DNS label (no dots), so "https://*.foo" cannot stretch
+  // across multiple labels.
+  function matchesAllowedOrigin(origin) {
+    if (!origin) return false;
+    for (const entry of allowedParentOrigins) {
+      if (!entry.includes("*")) {
+        if (entry === origin) return true;
+        continue;
+      }
+      const pattern = new RegExp(
+        "^" +
+          entry.replace(/[.+?^${}()|[\]\\]/g, "\\$&").replace(/\*/g, "[^.]+") +
+          "$",
+      );
+      if (pattern.test(origin)) return true;
+    }
+    return false;
+  }
+
+  // Trust decision: when the sender is same-origin-visible (event.origin is a
+  // real origin like https://www.perplexity.ai) we trust event.origin directly.
+  // When event.origin is "null" (opaque broker srcdoc), we fall back to the
+  // broker's stamped `parentOrigin` to identify the top window. The fallback
+  // is claim-only — we rely on the browser's native `targetOrigin` enforcement
+  // on the response path (see postToTrustedTop) to ensure replies can't be
+  // delivered to anyone but the actual top window of that claimed origin.
+  function getTrustedParentOrigin(event) {
+    const forwardedParentOrigin =
+      typeof event.data.parentOrigin === "string" ? event.data.parentOrigin : null;
+    const parentOrigin = event.origin === "null" ? forwardedParentOrigin : event.origin;
+    return matchesAllowedOrigin(parentOrigin) ? parentOrigin : null;
+  }
+
+  // All responses go to window.top with targetOrigin = the allowlisted origin.
+  // An attacker that iframes us inside their own null-origin broker can claim
+  // any parentOrigin they like, but the browser will drop the reply whenever
+  // the real top's origin doesn't match — so the screenshot never leaves.
+  function postToTrustedTop(message) {
+    if (!trustedTopOrigin) return;
+    try {
+      window.top.postMessage(message, trustedTopOrigin);
+    } catch (_error) {}
+  }
+
+  function inlineAll(original, clone) {
+    if (original.nodeType !== 1 || clone.nodeType !== 1) return;
+
+    try {
+      const computedStyle = getComputedStyle(original);
+      // cssText on a computed style is the serialized declaration in modern
+      // Chromium/Safari — a single read beats enumerating ~400 longhand
+      // properties. Firefox returns "" here, so we fall back on empty.
+      const serialized = computedStyle.cssText;
+      if (serialized) {
+        clone.style.cssText = serialized;
+      } else {
+        const parts = new Array(computedStyle.length);
+        for (let index = 0; index < computedStyle.length; index += 1) {
+          const property = computedStyle[index];
+          parts[index] = `${property}:${computedStyle.getPropertyValue(property)};`;
+        }
+        clone.style.cssText = parts.join("");
+      }
+    } catch (_error) {}
+
+    const originalChildren = original.children;
+    const clonedChildren = clone.children;
+    for (
+      let index = 0;
+      index < originalChildren.length && index < clonedChildren.length;
+      index += 1
+    ) {
+      inlineAll(originalChildren[index], clonedChildren[index]);
+    }
+  }
+
+  function extractFontUrl(srcValue) {
+    const matches = [
+      ...srcValue.matchAll(
+        /url\(["']?([^"')]+)["']?\)(?:\s*format\(["']?([^"')]+)["']?\))?/gi,
+      ),
+    ];
+    if (matches.length === 0) return null;
+    const woff2 = matches.find((m) => m[2] && m[2].toLowerCase().includes("woff2"));
+    if (woff2) return woff2[1];
+    const woff = matches.find((m) => m[2] && m[2].toLowerCase().includes("woff"));
+    if (woff) return woff[1];
+    return matches[0][1];
+  }
+
+  // Cache resolved font URL -> data URI across captures. Fonts on a page
+  // essentially never change, and a batch run emits multiple captures back to
+  // back — without this we'd refetch + re-base64 every time.
+  const fontDataUriCache = new Map();
+  const SRC_DECLARATION_RE = /src\s*:\s*[^;}]+/i;
+
+  async function fetchAsDataUri(url) {
+    if (fontDataUriCache.has(url)) return fontDataUriCache.get(url);
+    let dataUri = null;
+    try {
+      const response = await fetch(url, { mode: "cors", credentials: "omit" });
+      if (response.ok) {
+        const blob = await response.blob();
+        if (blob.size <= MAX_FONT_BYTES) {
+          dataUri = await new Promise((resolve) => {
+            const reader = new FileReader();
+            reader.onloadend = () =>
+              resolve(typeof reader.result === "string" ? reader.result : null);
+            reader.onerror = () => resolve(null);
+            reader.readAsDataURL(blob);
+          });
+        }
+      }
+    } catch (_error) {
+      dataUri = null;
+    }
+    fontDataUriCache.set(url, dataUri);
+    return dataUri;
+  }
+
+  function collectFontFaceRuleTexts() {
+    const rules = [];
+    for (const sheet of document.styleSheets) {
+      let cssRules;
+      try {
+        cssRules = sheet.cssRules;
+      } catch (_error) {
+        continue;
+      }
+      if (!cssRules) continue;
+      for (const rule of cssRules) {
+        const cssText = rule.cssText || "";
+        if (cssText.startsWith("@font-face")) rules.push(cssText);
+      }
+    }
+    return rules;
+  }
+
+  async function buildInlinedFontCss() {
+    const ruleTexts = collectFontFaceRuleTexts();
+    if (ruleTexts.length === 0) return null;
+
+    const resolved = ruleTexts.map((cssText) => {
+      if (!SRC_DECLARATION_RE.test(cssText)) return null;
+      const srcMatch = cssText.match(/src\s*:\s*([^;}]+)[;}]/i);
+      if (!srcMatch) return null;
+      const url = extractFontUrl(srcMatch[1]);
+      if (!url) return null;
+      try {
+        return { cssText, url: new URL(url, document.baseURI).href };
+      } catch (_error) {
+        return null;
+      }
+    });
+
+    const dataUris = await Promise.all(
+      resolved.map((entry) => (entry ? fetchAsDataUri(entry.url) : Promise.resolve(null))),
+    );
+
+    const inlined = [];
+    let totalBytes = 0;
+    for (let index = 0; index < resolved.length; index += 1) {
+      const entry = resolved[index];
+      const dataUri = dataUris[index];
+      if (!entry || !dataUri) continue;
+      const approxBytes = dataUri.length * 0.75;
+      if (totalBytes + approxBytes > MAX_TOTAL_FONT_BYTES) break;
+      totalBytes += approxBytes;
+      inlined.push(entry.cssText.replace(SRC_DECLARATION_RE, `src: url("${dataUri}")`));
+    }
+    return inlined.length > 0 ? inlined.join("\n") : null;
+  }
+
+  function stripExternal(clone) {
+    const images = clone.querySelectorAll("img");
+    for (let index = 0; index < images.length; index += 1) {
+      const src = images[index].getAttribute("src");
+      if (src && !src.startsWith("data:")) images[index].removeAttribute("src");
+    }
+
+    const elements = clone.querySelectorAll("*");
+    for (let index = 0; index < elements.length; index += 1) {
+      const style = elements[index].style.cssText;
+      if (style && style.includes("url(")) {
+        elements[index].style.cssText = style.replace(
+          /url\(["']?(?!data:)[^)"']*["']?\)/gi,
+          "none",
+        );
+      }
+    }
+  }
+
+  function emitScroll() {
+    scrollRaf = 0;
+    if (!scrollForwarding) return;
+    postToTrustedTop({
+      type: "INLINE_EDIT_SCROLL",
+      scrollX: window.scrollX,
+      scrollY: window.scrollY,
+    });
+  }
+
+  window.addEventListener(
+    "scroll",
+    function () {
+      if (!scrollForwarding || scrollRaf) return;
+      scrollRaf = requestAnimationFrame(emitScroll);
+    },
+    { passive: true, capture: true },
+  );
+
+  async function handleCaptureRequest(event) {
+    const requestId = event.data.requestId;
+    const scrollX = window.scrollX;
+    const scrollY = window.scrollY;
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+
+    function postResult(dataUrl) {
+      postToTrustedTop({
+        type: "INLINE_EDIT_SCREENSHOT_RESULT",
+        requestId,
+        dataUrl,
+        scrollX,
+        scrollY,
+      });
+    }
+
+    try {
+      // Wait for any pending web fonts to resolve so both inline metrics and
+      // the @font-face inlining below see the same loaded faces.
+      if (document.fonts && document.fonts.ready) {
+        try {
+          await document.fonts.ready;
+        } catch (_error) {}
+      }
+
+      const clone = document.documentElement.cloneNode(true);
+      inlineAll(document.documentElement, clone);
+
+      const removedNodes = clone.querySelectorAll("script,link[rel=\"stylesheet\"],style");
+      for (let index = 0; index < removedNodes.length; index += 1) {
+        removedNodes[index].remove();
+      }
+
+      stripExternal(clone);
+
+      // Re-embed web fonts as data-URI @font-face rules so the SVG rasterizer
+      // can resolve them — external font URLs aren't fetched during
+      // foreignObject rendering, which would otherwise force a fallback face
+      // and change text metrics.
+      const inlinedFontCss = await buildInlinedFontCss();
+      if (inlinedFontCss) {
+        const styleEl = document.createElement("style");
+        styleEl.textContent = inlinedFontCss;
+        const head = clone.querySelector("head");
+        if (head) head.appendChild(styleEl);
+        else clone.insertBefore(styleEl, clone.firstChild);
+      }
+
+      const html = new XMLSerializer().serializeToString(clone);
+      const svg =
+        `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}">` +
+        '<foreignObject width="100%" height="100%">' +
+        `<div xmlns="http://www.w3.org/1999/xhtml" style="width:${width}px;height:${height}px;overflow:hidden">` +
+        `<div style="position:relative;left:-${scrollX}px;top:-${scrollY}px">` +
+        html +
+        "</div></div></foreignObject></svg>";
+      const svgUrl = `data:image/svg+xml;charset=utf-8,${encodeURIComponent(svg)}`;
+      const image = new Image();
+      image.onload = function () {
+        const canvas = document.createElement("canvas");
+        canvas.width = width;
+        canvas.height = height;
+        canvas.getContext("2d").drawImage(image, 0, 0);
+        postResult(canvas.toDataURL("image/png"));
+      };
+      image.onerror = function () {
+        postResult(null);
+      };
+      image.src = svgUrl;
+    } catch (_error) {
+      postResult(null);
+    }
+  }
+
+  window.addEventListener("message", function (event) {
+    if (!event.data) return;
+    // Only accept messages from the direct parent frame. Blocks sibling /
+    // unrelated-window postMessage senders that could otherwise reach us.
+    if (event.source !== window.parent) return;
+
+    const trustedParentOrigin = getTrustedParentOrigin(event);
+    if (!trustedParentOrigin) return;
+    trustedTopOrigin = trustedParentOrigin;
+
+    if (event.data.type === "INLINE_EDIT_SCROLL_START") {
+      scrollForwarding = true;
+      emitScroll();
+      return;
+    }
+
+    if (event.data.type === "INLINE_EDIT_SCROLL_STOP") {
+      scrollForwarding = false;
+      if (scrollRaf) cancelAnimationFrame(scrollRaf);
+      scrollRaf = 0;
+      return;
+    }
+
+    if (event.data.type !== "INLINE_EDIT_CAPTURE_REQUEST") return;
+
+    handleCaptureRequest(event);
+  });
+})();
+
+</script></body>
+</html>
